@@ -34,7 +34,7 @@ body {
   position: relative;
   background-color: var(--bg-color-main);
   margin: var(--header-height) 0 0 0;
-  padding: 0 1rem;
+  padding: 1rem 1rem;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   transition: all 0.3s ease;
@@ -76,7 +76,7 @@ header {
 }
 
 .header__img img {
-  width: 100%;
+  width: 40px;
 }
 
 /* ===== NAVBAR ===== */
@@ -140,7 +140,6 @@ header {
   pointer-events: none;
 }
 
-
 /* show navbar */
 .show {
   left: 0;
@@ -167,3 +166,38 @@ header {
 
 
 /* ===== MEDIA QUERIES =====*/
+@media screen and (min-width: 768px) {
+  body {
+    margin: calc(var(--header-height) + 1rem) 0 0 0;
+    padding-left: calc(var(--nav-width) + 2rem)
+  }
+
+  .header {
+    height: calc(var(--header-height) + 1rem);
+    padding: 0 2rem 0 calc(var(--nav-width) + 2rem)
+  }
+
+  .header__img {
+    width: 40px;
+    height: 40px
+  }
+
+  .header__img img {
+    width: 45px;
+  }
+
+  .navbar {
+    left: 0;
+    padding: 1rem 1rem 0 0 ;
+  }
+
+  /* show full side navbar on destop */
+  .show {
+    width: calc(var(--nav-width) + 156px)
+  }
+
+  /* add padding to body */
+  .body-pd {
+    padding-left: calc(var(--nav-width) + 188px);
+  }
+}

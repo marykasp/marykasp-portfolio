@@ -85,3 +85,10 @@
 .style-switcher .color-5 {
   background: #f8b28e;
 }
+
+/* ===== MEDIA QUERIES =====*/
+@media screen and (min-width: 768px) {
+  .style-switcher {
+    top: 70px;
+  }
+}
