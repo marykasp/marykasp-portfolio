@@ -121,6 +121,34 @@ header {
   font-family: var(--header-font);
   color: var(--white-color);
   font-weight: 700;
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.nav__logo-name span {
+  font-family: "Clicker Script", cursive;
+  font-size: 1.8rem;
+}
+
+.nav__logo-name::before {
+  content: '';
+  position: absolute;
+  top: 110%;
+  left: 0;
+  height: 2px;
+  width: 60px;
+  background-color: var(--white-color);
+}
+
+.nav__logo-name::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  background-color: var(--white-color);
+  left: 0;
+  bottom: -30%;
 }
 
 .nav__link {
