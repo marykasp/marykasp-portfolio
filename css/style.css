@@ -62,7 +62,7 @@ header {
 }
 
 .header__toggle {
-  color: var(--first-color);
+  color: var(--skin-color);
   cursor: pointer;
   font-size: 1.5rem;
 }
@@ -87,7 +87,7 @@ header {
   left: -30%;
   width: calc(var(--nav-width));
   height: 100vh;
-  background-color: var(--first-color);
+  background-color: var(--skin-color);
   padding: 0.5rem 1rem 0 0;
   transition: 0.5s;
   z-index: var(--z-fixed)
@@ -126,7 +126,7 @@ header {
 
 .nav__link {
   position: relative;
-  color: var(--first-color-light);
+  color: var(--white-color);
   margin-bottom: 1.5rem;
   transition: 0.3s;
 }

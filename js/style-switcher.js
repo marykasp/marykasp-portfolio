@@ -14,19 +14,20 @@ window.addEventListener("scroll", function() {
   }
 })
 
-// // ================= Alternate Style Colors =============================
-// const alternateStyles = document.querySelectorAll(".alternate-style");
+// ================= Alternate Style Colors =============================
+const alternateStyles = document.querySelectorAll(".alternate-style");
 
-// function setActiveStyle(color) {
-//   alternateStyles.forEach((style) => {
-//     if(color == style.getAttribute("title")) {
-//       style.removeAttribute("disabled");
-//     }
-//     else {
-//       style.setAttribute("disabled", "true");
-//     }
-//   })
-// }
+const setActiveStyle = function(color) {
+  alternateStyles.forEach((style) => {
+    if(color == style.getAttribute("title")) {
+      style.removeAttribute("disabled")
+    } else {
+      style.setAttribute("disabled", "true")
+    }
+  })
+}
+
+
 
 // // ================= Light & Dark Mode =============================
 // const dayNight = document.querySelector(".day-night");
