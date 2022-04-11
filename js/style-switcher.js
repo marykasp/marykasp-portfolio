@@ -8,15 +8,11 @@ styleSwitcherToggler.addEventListener("click", function() {
 })
 
 // hide style theme switcher on scroll
-// window.addEventListener("scroll", function() {
-//   if()
-// })
-// // hide style switcher on scroll
-// window.addEventListener("scroll", () => {
-//   if(document.querySelector(".style-switcher").classList.contains("open")) {
-//     document.querySelector(".style-switcher").classList.remove("open");
-//   }
-// })
+window.addEventListener("scroll", function() {
+  if(styleSwitcher.classList.contains("open")) {
+    styleSwitcher.classList.remove("open")
+  }
+})
 
 // // ================= Alternate Style Colors =============================
 // const alternateStyles = document.querySelectorAll(".alternate-style");
