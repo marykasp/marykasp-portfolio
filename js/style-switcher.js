@@ -1,4 +1,4 @@
-// ================= Toggle Style Switcher =============================
+// ================= Toggle Style Switcher ===========================
 const styleSwitcherToggler = document.querySelector(".style-switcher-toggler");
 const styleSwitcher = document.querySelector('.style-switcher');
 
@@ -14,7 +14,7 @@ window.addEventListener("scroll", function() {
   }
 })
 
-// ================= Alternate Style Colors =============================
+// ================= Alternate Style Colors ============================
 const alternateStyles = document.querySelectorAll(".alternate-style");
 
 const setActiveStyle = function(color) {
@@ -28,6 +28,18 @@ const setActiveStyle = function(color) {
 }
 
 
+// ================= Alternate Light & Dark Mode ============================
+const dayNight = document.querySelector(".day-night");
+
+dayNight.addEventListener("click", function() {
+  document.body.classList.toggle("dark")
+})
+
+// window.addEventListener("load", () => {
+//   if(document.body.classList.contains("dark")) {
+//     dayNight.
+//   }
+// })
 
 // // ================= Light & Dark Mode =============================
 // const dayNight = document.querySelector(".day-night");

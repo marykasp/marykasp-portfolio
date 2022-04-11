@@ -14,7 +14,7 @@
    /* ==== Colors ==== */
   --bg-color-main:#f9f9fd;
   --bg-color-sidebar:#e8dfec;
-  --white-color: #fff;
+  --header-color: #fff;
   --text-dark: #302e4d;
   --text-light: #504e70;
   --skin-color: #6b5b7d;
@@ -22,6 +22,15 @@
 
   /* ==== z-index ==== */
   --z-fixed: 100;
+}
+
+body.dark {
+  --bg-color-main: #282c34;
+  --bg-color-sidebar: #393939;
+  --header-color: #1c1e24;
+  --text-dark: #fff;
+  --text-light: #e9e9e9;
+  --text-cta: #fff;
 }
 
 /* ===== BASE ===== */
@@ -42,6 +51,7 @@ body {
   transition: all 0.3s ease;
 }
 
+
 a {
   text-decoration: none;
 }
@@ -58,7 +68,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
-  background-color: var(--white-color);
+  background-color: var(--header-color);
   z-index: var(--z-fixed);
 }
 
@@ -68,18 +78,6 @@ header {
   font-size: 1.5rem;
 }
 
-.header__img {
-  width: 35px;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.header__img img {
-  width: 40px;
-}
 
 /* ===== NAVBAR ===== */
 .navbar {
@@ -116,12 +114,12 @@ header {
 
 .nav__logo-icon {
   font-size: 1.25rem;
-  color: var(--white-color);
+  color: var(--header-color);
 }
 
 .nav__logo-name {
   font-family: var(--header-font);
-  color: var(--white-color);
+  color: var(--header-color);
   font-weight: 700;
   font-size: 1.7rem;
   letter-spacing: 2px;
@@ -140,7 +138,7 @@ header {
   left: 0;
   height: 2px;
   width: 60px;
-  background-color: var(--white-color);
+  background-color: var(--header-color);
 }
 
 .nav__logo-name::after {
@@ -148,21 +146,21 @@ header {
   position: absolute;
   height: 2px;
   width: 30px;
-  background-color: var(--white-color);
+  background-color: var(--header-color);
   left: 0;
   bottom: -30%;
 }
 
 .nav__link {
   position: relative;
-  color: var(--white-color);
+  color: var(--header-color);
   margin-bottom: 1.5rem;
   transition: 0.3s;
 }
 
 .nav__link:hover,
 .nav__link i:hover {
-  color: var(--white-color);
+  color: var(--header-color);
 }
 
 .nav__icon {
@@ -182,7 +180,7 @@ header {
 
 /* Active links */
 .active {
-  color: var(--white-color);
+  color: var(--header-color);
 }
 
 .active::before {
@@ -191,7 +189,7 @@ header {
   left: 0;
   width: 2px;
   height: 32px;
-  background-color: var(--white-color)
+  background-color: var(--header-color);
 }
 
 /* ===== MODE TOGGLER =====*/
@@ -223,7 +221,9 @@ input::before {
 input:checked {
   background-image: url(https://i.postimg.cc/Hn0nstVK/Screenshot-2020-04-16-at-1-07-19-PM.png);
   transition: background-image .90s;
+  position: relative;
 }
+
 
 input:checked:before {
   transform: translate(100%);
