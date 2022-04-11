@@ -1,0 +1,51 @@
+/* ===== GOOGLE FONTS ===== */
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600&family=Raleway:wght@300;400;500;600&display=swap");
+
+/* ===== VARIABLES CSS ===== */
+:root {
+  --header-height: 3rem;
+  --nav-width: 68px;
+
+   /* ==== Font ==== */
+   --body-font: "Poppins", sans-serif;
+   --header-font: "Raleway", sans-serif;
+   --normal-font-size: 1rem;
+
+   /* ==== Colors ==== */
+  --bg-color-main: #f9f9fd;
+  --bg-color-sidebar: #e8dfec;
+  --white-color: #fff;
+  --text-dark: #302e4d;
+  --text-light: #504e70;
+  --first-color: #4723D9;
+  --first-color-light: #AFA5D9;
+
+  /* ==== z-index ==== */
+  --z-fixed: 100;
+}
+
+/* ===== BASE ===== */
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: var(--header-height) 0 0 0;
+  padding: 0 1rem;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  transition: all 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===== HEADER ===== */
+
+/* ===== NAVBAR ===== */
+
+/* show navbar */
