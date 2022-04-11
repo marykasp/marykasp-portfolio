@@ -195,33 +195,41 @@ header {
 }
 
 /* ===== MODE TOGGLER =====*/
-.day-night {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-left: 10px;
-  margin-bottom: 2rem;
-}
-
-input[type="checkbox"] {
+input {
   -webkit-appearance: none;
   outline: none;
-  width: 40px;
-  height: 25px;
+  width: 60px;
+  height: 30px;
   border-radius: 50px;
-  background-color: var(--yellow-color);
+  box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.3);
+  background-image: url(https://i.postimg.cc/857jHw2q/Screenshot-2020-04-16-at-1-07-06-PM.png);
+  background-size: cover;
   position: relative;
+  transition: background-image .90s;
 }
 
-/* .label {
-  height: 26px;
-  width: 50px;
-  display: flex;
-  align-items: center;
+input::before {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  transition: all .9s;
+  background-color: #F7CA33;
   border-radius: 50px;
-  background-color: var(--white-color);
-} */
+}
+
+input:checked {
+  background-image: url(https://i.postimg.cc/Hn0nstVK/Screenshot-2020-04-16-at-1-07-19-PM.png);
+  transition: background-image .90s;
+}
+
+input:checked:before {
+  transform: translate(100%);
+  transition: all .9s;
+  background-color: #ECF0F3;
+}
 
 /* ===== MEDIA QUERIES =====*/
 @media screen and (min-width: 768px) {
@@ -257,5 +265,15 @@ input[type="checkbox"] {
   /* add padding to body */
   .body-pd {
     padding-left: calc(var(--nav-width) + 188px);
+  }
+
+  input {
+    width: 95px;
+    height: 40px;
+  }
+
+  input::before {
+    height: 40px;
+    width: 47.5px;
   }
 }
