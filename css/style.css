@@ -34,8 +34,8 @@
 body {
   position: relative;
   background-color: var(--bg-color-main);
-  /* margin: var(--header-height) 0 0 0; */
-  /* padding: 0 1rem; */
+  margin: var(--header-height) 0 0 0;
+  padding: 0 1rem;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   transition: all 0.3s ease;
@@ -47,11 +47,10 @@ a {
 
 /* ===== HEADER ===== */
 header {
-  border: 1px solid red;
   width: 100%;
-  padding: 0;
   height: var(--header-height);
-  position: fixexd;
+  border-bottom: 1px solid var(--bg-color-sidebar);
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
@@ -69,8 +68,8 @@ header {
 }
 
 .header__img {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   display: flex;
   justify-content: center;
   border-radius: 50%;
@@ -78,7 +77,7 @@ header {
 }
 
 .header__img img {
-  width: 40px;
+  width: 100%;
 }
 
 /* ===== NAVBAR ===== */
@@ -148,6 +147,7 @@ header {
   left: 0;
 }
 
+/* Add padding */
 .body-pd {
   padding-left: calc(var(--nav-width) + 1rem);
 }

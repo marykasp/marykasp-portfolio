@@ -1,11 +1,11 @@
 // ====== SHOW NAVBAR ========
-const showNavbar = (toggleId, navId, bodyId) => {
+const showNavbar = (toggleId, navId, bodyId, headerId) => {
   const toggle = document.getElementById(toggleId);
   const nav = document.getElementById(navId);
   const bodyPd = document.getElementById(bodyId);
-
+  const headerPd = document.getElementById(headerId)
   // validate that variables exist
-  if(toggle && nav && bodyId) {
+  if(toggle && nav && bodyId && headerPd) {
     toggle.addEventListener("click", () => {
       // show navbar
       nav.classList.toggle('show')
@@ -19,11 +19,12 @@ const showNavbar = (toggleId, navId, bodyId) => {
       }
       // add padding to body
       bodyPd.classList.toggle('body-pd')
+      headerPd.classList.toggle('body-pd');
     })
   }
 }
 
-showNavbar('header-toggle', 'nav-bar', 'body-pd')
+showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header')
 
 // ======= LINK ACTIVE ========
 // list of all the nav links (a elements)

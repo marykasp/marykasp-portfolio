@@ -1,14 +1,16 @@
 // ================= Toggle Style Switcher =============================
 const styleSwitcherToggler = document.querySelector(".style-switcher-toggler");
+const styleSwitcher = document.querySelector('.style-switcher');
 
+// show style theme switcher on click
 styleSwitcherToggler.addEventListener("click", function() {
-  document.querySelector(".style-switcher").classList.toggle("open")
+  styleSwitcher.classList.toggle("open")
 })
-// const styleSwitcherToggler = document.querySelector(".style-switcher-toggler");
-// styleSwitcherToggler.addEventListener("click", () => {
-//   document.querySelector(".style-switcher").classList.toggle("open");
-// })
 
+// hide style theme switcher on scroll
+// window.addEventListener("scroll", function() {
+//   if()
+// })
 // // hide style switcher on scroll
 // window.addEventListener("scroll", () => {
 //   if(document.querySelector(".style-switcher").classList.contains("open")) {
