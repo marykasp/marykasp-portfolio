@@ -25,14 +25,14 @@ const showNavbar = (toggleId, navId, bodyId) => {
 
 showNavbar('header-toggle', 'nav-bar', 'body-pd')
 
-// ==== LINK ACTIVE ====
+// ======= LINK ACTIVE ========
 // list of all the nav links (a elements)
 const linkColor = document.querySelectorAll('.nav__link');
 
 linkColor.forEach(function(link) {
   // add an event listener to each link (<a> element)
-  link.addEventListener("click", function(e) {
-    // remove the active class list from all other a elements
+  link.addEventListener("click", function() {
+    // remove active class from other links
     for(let i = 0; i < linkColor.length; i++) {
       linkColor[i].classList.remove("active")
     }
@@ -40,4 +40,5 @@ linkColor.forEach(function(link) {
     this.classList.add("active");
   })
 })
+
 
