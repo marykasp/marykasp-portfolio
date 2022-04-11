@@ -4,8 +4,8 @@
   top: 60px;
   padding: 15px;
   width: 200px;
-  border: 1px solid var(--white-color);
-  background: var(--bg-color-sidebar);
+  border: 1px solid var(--bg-color-sidebar);
+  background: var(--white-color);
   z-index: 101;
   border-radius: 5px;
   cursor: pointer;
