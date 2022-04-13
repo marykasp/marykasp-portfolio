@@ -29,7 +29,8 @@ const setActiveStyle = function(color) {
 
 
 // ================= Alternate Light & Dark Mode ============================
-const dayNight = document.querySelector(".day-night");
+// get checkbox input
+const dayNight = document.querySelector("#switch");
 
 dayNight.addEventListener("click", function() {
   document.body.classList.toggle("dark")

@@ -19,6 +19,22 @@
   --text-light: #504e70;
   --skin-color: #6b5b7d;
   --yellow-color: #F3BC38;
+  --white-color: #fff;
+
+  /* ==== Mode Toggler Colors ==== */
+  /** Sunny side **/
+  --blue-background: #c2e9f6;
+  --blue-border: #72cce3;
+  --blue-color: #96dcee;
+  --yellow-background: #fffaa8;
+  --yellow-border: #f5eb71;
+
+  /** Dark side **/
+  --indigo-background:#808fc7;
+  --indigo-border: #5d6baa;
+  --indigo-color: #6b7abb;
+  --gray-border: #e8e8ea;
+  --gray-dots: #e8e8ea;
 
   /* ==== z-index ==== */
   --z-fixed: 100;
@@ -27,13 +43,13 @@
 body.dark {
   --bg-color-main: #282c34;
   --bg-color-sidebar: #393939;
-  --header-color: #1c1e24;
+  --header-color: #292b33;
   --text-dark: #fff;
   --text-light: #e9e9e9;
   --text-cta: #fff;
 }
 
-/* ===== BASE ===== */
+/* ========= BASE ========== */
 *, ::before, ::after {
   margin: 0;
   padding: 0;
@@ -56,7 +72,7 @@ a {
   text-decoration: none;
 }
 
-/* ===== HEADER ===== */
+/* ========= HEADER ========== */
 header {
   width: 100%;
   height: var(--header-height);
@@ -72,6 +88,7 @@ header {
   z-index: var(--z-fixed);
 }
 
+/* ==== Header Menu Toggler ==== */
 .header__toggle {
   color: var(--skin-color);
   cursor: pointer;
@@ -79,7 +96,7 @@ header {
 }
 
 
-/* ===== NAVBAR ===== */
+/* ========== NAVBAR ========== */
 .navbar {
   position: fixed;
   top: 0;
@@ -173,7 +190,7 @@ header {
   left: 0;
 }
 
-/* Add padding */
+/* Add padding to header and body*/
 .body-pd {
   padding-left: calc(var(--nav-width) + 1rem);
 }
@@ -192,10 +209,97 @@ header {
   background-color: var(--header-color);
 }
 
-/* ===== DARK MODE TOGGLER =====*/
+/* ========= DARK MODE TOGGLER =========*/
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-label {
+  width: 75px;
+  height: 37.5px;
+  background: var(--blue-color);
+  border: 1px solid var(--blue-border);
+  border-radius: 50px;
+  display: flex;
+  position: relative;
+  transition: all 350ms ease-in;
+}
+
+/* sun icon */
+.toggle-label::before {
+  content: '';
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--yellow-border);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 32px;
+  background-color: var(--yellow-background);
+  animation-name: reverse;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  transition: all 350ms ease-in;
+}
+
+/* cloud background light mode */
+.toggle-label-background {
+  width: 4px;
+  height: 2px;
+  border-radius: 2px;
+  position: relative;
+  background-color: #fff;
+  left: 50px;
+  top: 15px;
+  transition: all 150ms ease-in;
+}
+
+/* top and bottom of cloud */
+.toggle-label-background::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  width: 15px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  left: -7px;
+  transition: all 150ms ease-in;
+}
+
+.toggle-label-background::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  width: 15px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  left: -3.5px;
+  transition: all 150ms ease-in;
+}
+
+/* Switch to dark mode */
+
+/* reverse animation - 350ms */
+@keyframes reverse {
+  0% {
+    width: 32px;
+    left: 10px;
+  }
+  60% {
+    width: 43px;
+    left: 30px;
+  }
+  100% {
+    left: 2px;
+  }
+}
 
 
-/* ===== MEDIA QUERIES =====*/
+
+
+/* ======== MEDIA QUERIES ========*/
 @media screen and (min-width: 768px) {
   body {
     margin: calc(var(--header-height) + 1rem) 0 0 0;
@@ -231,13 +335,5 @@ header {
     padding-left: calc(var(--nav-width) + 188px);
   }
 
-  input {
-    width: 95px;
-    height: 40px;
-  }
 
-  input::before {
-    height: 40px;
-    width: 47.5px;
-  }
 }

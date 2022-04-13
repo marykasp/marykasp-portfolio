@@ -5,7 +5,7 @@
   padding: 15px;
   width: 200px;
   border: 1px solid var(--bg-color-sidebar);
-  background: var(--white-color);
+  background: var(--header-color);
   z-index: 101;
   border-radius: 5px;
   cursor: pointer;
@@ -23,7 +23,7 @@
   height: 40px;
   text-align: center;
   font-size: 20px;
-  background: var(--white-color);
+  background: var(--header-color);
   color: var(--text-dark);
   right: 100%;
   border: 1px solid var(--bg-color-sidebar);
