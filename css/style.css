@@ -280,12 +280,46 @@ header {
 }
 
 /* Switch to dark mode */
+.toggle-checkbox:checked + .toggle-label {
+  background-color: var(--indigo-color);
+  border-color: var(--indigo-border);
+}
+
+/* moon icon */
+.toggle-checkbox:checked + .toggle-label::before {
+  background: #fff;
+  border-color: var(--gray-border);
+  animation: switch;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+}
+
+/* show after input is checked */
+.toggle-label::after {
+  content: '';
+  box-shadow: inset var(--gray-dots) -24px 14px 0 -2px, var(--gray-dots) -13px 0 0 2px;
+  position: absolute;
+  left: 63px;
+  top: 12px;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  border-radius: 50%;
+  opacity: 0;
+  transition-delay: 0ms;
+  transition: all 250ms ease-in;
+}
+
+.toggle-checkbox:checked + .toggle-label::after {
+  opacity: 1;
+  transition-delay: 350ms;
+}
 
 /* reverse animation - 350ms */
 @keyframes reverse {
   0% {
     width: 32px;
-    left: 10px;
+    left: 40px;
   }
   60% {
     width: 43px;
@@ -293,6 +327,21 @@ header {
   }
   100% {
     left: 2px;
+  }
+}
+
+/* left to right animation */
+@keyframes switch {
+  0% {
+    left: 2px;
+  }
+  60% {
+    width: 43px;
+    left: 30px;
+  }
+  100% {
+    width: 32px;
+    left: 40px;
   }
 }
 
