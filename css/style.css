@@ -74,14 +74,16 @@ a {
 }
 
 p {
-  font-size: 0.8rem;
+  font-size: 1rem;
+  line-height: 1.5;
   color: var(--text-dark)
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1500px;
   width: 100%;
-  padding: 0 1rem;
+  padding: 1rem;
+  /* border: 1px solid red; */
 }
 
 
@@ -389,7 +391,7 @@ section {
 
 /* display section */
 section.active {
-  display: block
+  display: block;
 }
 
 section .title h2 {
@@ -399,6 +401,7 @@ section .title h2 {
   font-weight: 600;
   position: relative;
   margin-bottom: 2rem;
+  margin-top: 1.5rem;
 }
 
 section .title h2::before {
