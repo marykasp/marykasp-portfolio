@@ -68,6 +68,10 @@ body {
   transition: all 0.3s ease;
 }
 
+h2, h3, h4 {
+  color: var(--text-dark)
+}
+
 
 a {
   text-decoration: none;
@@ -77,13 +81,6 @@ p {
   font-size: 1rem;
   line-height: 1.5;
   color: var(--text-dark)
-}
-
-.container {
-  max-width: 1500px;
-  width: 100%;
-  padding: 1rem;
-  /* border: 1px solid red; */
 }
 
 
@@ -414,7 +411,103 @@ section .title h2::before {
   left: 0;
 }
 
+section {
+  border: 1px solid red;
+  margin: 30px 10px;
+}
+
+.container {
+  max-width: 1300px;
+  border: 1px solid blue;
+  width: 100%;
+  margin: auto;
+  padding-top: 60px;
+  padding-bottom: 70px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /* ========= HOMEPAGE =========*/
+
+.home .home-info {
+  flex: 0, 0, 100%;
+  max-width: 100%;
+}
+
+h3.hello {
+  font-family: var(--header-font);
+  font-size: 28px;
+  margin: 15px 0;
+}
+
+h3.hello span {
+  font-family: "Clicker Script", cursive;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--skin-color);
+}
+
+h3.profession {
+  font-family: var(--header-font);
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+h3.profession span {
+  color: var(--skin-color)
+}
+
+.home-info p {
+  font-size: 18px;
+  margin-bottom: 70px;
+  color: var(--text-light);
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socials a.social-icon {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  font-size: 30px;
+  background: var(--header-color);
+  color: var(--text-dark);
+  border: 1px solid var(--bg-color-sidebar);
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.socials a.social-icon:hover {
+  transform: scale(1.25);
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 35px;
+  border-radius: 40px;
+  display: inline-block;
+  white-space: nowrap;
+  color: white;
+  background: var(--skin-color);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.home .profile-area {
+  flex: 0, 0, 40%;
+  max-width: 40%;
+}
 
 /* ========= SKILLS =========*/
 
