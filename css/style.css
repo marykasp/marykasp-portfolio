@@ -56,6 +56,7 @@ body.dark {
   box-sizing: border-box;
 }
 
+
 body {
   position: relative;
   background-color: var(--bg-color-main);
@@ -71,6 +72,19 @@ body {
 a {
   text-decoration: none;
 }
+
+p {
+  font-size: 0.8rem;
+  color: var(--text-dark)
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+
 
 /* ========= HEADER ========== */
 header {
@@ -368,6 +382,38 @@ header {
 }
 
 
+/* ========= SECTION BASE STYLES =========*/
+section {
+  display: none;
+}
+
+/* display section */
+section.active {
+  display: block
+}
+
+section .title h2 {
+  font-family: var(--header-font);
+  font-size: 30px;
+  color: var(--text-light);
+  font-weight: 600;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+section .title h2::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100px;
+  background-color: var(--skin-color);
+  top: 100%;
+  left: 0;
+}
+
+/* ========= HOMEPAGE =========*/
+
+/* ========= SKILLS =========*/
 
 
 /* ======== MEDIA QUERIES ========*/
