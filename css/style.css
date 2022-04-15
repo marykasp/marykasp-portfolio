@@ -398,31 +398,28 @@ section .title h2 {
   font-weight: 600;
   position: relative;
   margin-bottom: 2rem;
-  margin-top: 1.5rem;
+  /* margin-top: 1.5rem; */
 }
 
 section .title h2::before {
   content: "";
   position: absolute;
   height: 4px;
-  width: 100px;
+  width: 85px;
   background-color: var(--skin-color);
   top: 100%;
   left: 0;
 }
 
 section {
-  border: 1px solid red;
   margin: 30px 10px;
 }
 
 .container {
-  max-width: 1300px;
-  border: 1px solid blue;
+  max-width: 1200px;
   width: 100%;
-  margin: auto;
-  padding-top: 60px;
-  padding-bottom: 70px;
+  /* margin: auto; */
+  padding: 1.5rem 0;
 }
 
 .row {
@@ -431,6 +428,11 @@ section {
 }
 
 /* ========= HOMEPAGE =========*/
+.home .container {
+  padding-top: 80px;
+  padding-bottom: 70px;
+  margin: auto;
+}
 
 .home .home-info {
   flex: 0, 0, 100%;
@@ -468,11 +470,12 @@ h3.profession span {
 
 .socials {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-items: center;
 }
 
 .socials a.social-icon {
+  margin-top: 2rem;
   display: inline-block;
   width: 45px;
   height: 45px;
@@ -502,18 +505,23 @@ h3.profession span {
   background: var(--skin-color);
   border: none;
   transition: all 0.3s ease;
+  margin-right: 1rem;
 }
 
-.home .profile-area {
-  flex: 0, 0, 40%;
-  max-width: 40%;
+.btn:hover {
+  transform: scale(1.05);
 }
+
+.profile-area {
+  display: none;
+}
+
 
 /* ========= SKILLS =========*/
 
 
 /* ======== MEDIA QUERIES ========*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   body {
     margin: calc(var(--header-height) + 1rem) 0 0 0;
     padding-left: calc(var(--nav-width) + 2rem)
@@ -546,6 +554,103 @@ h3.profession span {
   /* add padding to body */
   .body-pd {
     padding-left: calc(var(--nav-width) + 188px);
+  }
+  /* HOMEPAGE */
+  .home .row {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .home-info {
+    flex: 0 0 60%;
+    max-width: 60%;
+    margin-right: 2rem;
+  }
+
+  /* PROFILE AREA HOMEPAGE */
+  .home .profile-area {
+    margin-left: 2rem;
+    flex: 0, 0, 40%;
+    max-width: 40%;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .profile-area .outer-circle {
+    width: 26rem;
+    height: 26rem;
+    border: 1px solid var(--skin-color);
+    border-radius: 50%;
+    position: relative;
+    animation: move 30s linear infinite;
+  }
+
+  @keyframes move {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .profile-area .outer-circle span {
+    background: var(--bg-color-sidebar);
+    color: var(--skin-color);
+    display: block;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 1rem hsl(14, 89%, 35%, 12%);
+  }
+
+  /* place icons around circle */
+  .profile-area .outer-circle span:nth-child(1) {
+    left: calc(50% - 1.5rem);
+    top: -1.5rem;
+  }
+
+  .profile-area .outer-circle span:nth-child(2) {
+    right: -1.5rem;
+    top: calc(50% - 1.5rem);
+  }
+
+  .profile-area .outer-circle span:nth-child(3) {
+    left: -1.5rem;
+    top: calc(50% - 1.5rem);
+  }
+
+  .profile-area .outer-circle span:nth-child(4) {
+    bottom: -1.5rem;
+    left: calc(50% - 1.5rem);
+  }
+
+  .profile-area .inner-circle {
+    position: absolute;
+    width: 18rem;
+    height: 18rem;
+    line-height: 18rem;
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .profile-area .inner-circle img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 50%;
+    transform: translate(0%, -50%);
   }
 
 
