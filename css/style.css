@@ -85,8 +85,8 @@ p {
   color: var(--text-dark)
 }
 
-span {
-  color: var(--text-dark)
+.nav__links span {
+  color: var(--nav-links)
 }
 
 i {
@@ -156,7 +156,7 @@ header {
 
 .nav__logo-name {
   font-family: var(--header-font);
-  color: var(--header-color);
+  color: white;
   font-weight: 700;
   font-size: 1.7rem;
   letter-spacing: 2px;
@@ -190,14 +190,14 @@ header {
 
 .nav__link {
   position: relative;
-  color: var(--header-color);
+  color: white;
   margin-bottom: 1.5rem;
   transition: 0.3s;
 }
 
 .nav__link:hover,
 .nav__link i:hover {
-  color: var(--header-color);
+  color: white;
 }
 
 .nav__icon {
@@ -484,8 +484,8 @@ section {
 /* display section */
 section.active {
   display: block;
-  padding: 1rem 0;
-  margin: 30px 10px;
+  padding: 30px 0;
+  margin: 30px auto;
 }
 
 .title .section__title {
@@ -495,7 +495,6 @@ section.active {
   font-weight: 600;
   position: relative;
   margin-bottom: 2rem;
-  /* margin-top: 1.5rem; */
 }
 
 .section__subtitle  {
@@ -519,31 +518,30 @@ section.active {
 .container {
   max-width: 1300px;
   width: 100%;
-}
-
-.grid {
-  display: grid;
+  margin: auto;
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 }
 
 
 /* ========= ABOUT =========*/
-.about__container {
-  row-gap: 2.5rem;
-}
 
 .about__img {
-  width: 220px;
+  width: 200px;
   border-radius: 1.5rem;
-  justify-self: center;
+  margin-bottom: 1rem;
 }
 
 .about__data {
   text-align: center;
+}
+
+.about__description {
+  text-align: left;
 }
 
 .about__info {
@@ -588,7 +586,7 @@ section.active {
 /* ======== MEDIA QUERIES ========*/
 @media screen and (min-width: 900px) {
   body {
-    margin: calc(var(--header-height) + 1rem) 0 0 0;
+    margin: calc(var(--header-height) + 2rem) 0 0 0;
     padding-left: calc(var(--nav-width) + 2rem)
   }
 
@@ -727,21 +725,15 @@ section.active {
   }
 
   .about__container {
-    /* margin: 4rem auto; */
     display: flex;
-    /* justify-content: space-between; */
-    gap: 3rem;
+    gap: 2rem;
   }
 
   .about__img {
     flex: 0 0 40%;;
-    /* width: 220px; */
+    width: 400px;
     border-radius: 1.5rem;
     justify-self: center;
-  }
-
-  .about__data {
-    flex: 0 0 60%;
   }
 
   .about__box {
