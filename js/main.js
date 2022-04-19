@@ -34,7 +34,7 @@ const showNavbar = (toggleId, navId, bodyId, headerId) => {
         toggle.classList.add('ri-menu-line')
         toggle.classList.remove('ri-close-fill')
       }
-      // add padding to body
+      // add padding to body and header
       bodyPd.classList.toggle('body-pd')
       headerPd.classList.toggle('body-pd');
     })
