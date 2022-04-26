@@ -768,7 +768,9 @@ section.active {
   }
 
   .about__box {
+    margin-top: 1rem;
     margin-right: 0.9rem;
-    grid-template-columns: auto minmax(0,1fr);
+    padding: 1rem 0;
+
   }
 }
