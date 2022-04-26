@@ -27,12 +27,12 @@ const showNavbar = (toggleId, navId, bodyId, headerId) => {
       // show navbar
       nav.classList.toggle('show')
       // change icon
-      if(toggle.classList.contains('ri-menu-line')) {
-        toggle.classList.remove('ri-menu-line')
-        toggle.classList.add('ri-close-fill')
+      if(toggle.classList.contains('bx-menu')) {
+        toggle.classList.remove('bx-menu')
+        toggle.classList.add('bx-x')
       } else {
-        toggle.classList.add('ri-menu-line')
-        toggle.classList.remove('ri-close-fill')
+        toggle.classList.add('bx-menu')
+        toggle.classList.remove('bx-x')
       }
       // add padding to body and header
       bodyPd.classList.toggle('body-pd')
@@ -44,6 +44,7 @@ const showNavbar = (toggleId, navId, bodyId, headerId) => {
 showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header')
 
 // ====================== ACTIVE LINK & SHOW SECTION========================
+// iterate over the link items
 linkItem.forEach(function(link) {
   // add an event listener to each link (<a> element)
   link.addEventListener("click", function() {

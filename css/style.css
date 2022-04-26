@@ -532,6 +532,7 @@ section.active {
 
 .about__img {
   width: 200px;
+  height: 200px;
   border-radius: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -555,6 +556,7 @@ section.active {
   background-color: var(--skin-color);
   border-radius: 0.65rem;
   padding: 0.5rem 0.65rem;
+  text-align: center;
 }
 
 .about__title, .about__subtitle {
@@ -580,8 +582,36 @@ section.active {
   margin-bottom: 2rem;
   text-align: left;
 }
-/* ========= SKILLS =========*/
 
+.about-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.personal-info .info-item {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.personal-info .info-item p {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 0;
+  color: var(--text-light);
+  margin-right: 30px;
+  border-bottom: 1px solid var(--bg-color-sidebar);
+}
+
+.personal-info .info-item p span {
+  font-weight: 400;
+  margin-left: 4px;
+  display: inline-block;
+  color: var(--text-dark);
+}
+/* ========= SKILLS =========*/
+.skills span {
+  color: var(--text-light);
+}
 
 /* ======== MEDIA QUERIES ========*/
 @media screen and (min-width: 900px) {
@@ -730,16 +760,15 @@ section.active {
   }
 
   .about__img {
-    flex: 0 0 40%;;
-    width: 400px;
+    flex: 0 0 30%;
+    width: 200px;
+    height: 300px;
     border-radius: 1.5rem;
     justify-self: center;
   }
 
   .about__box {
-    background-color: var(--skin-color);
-    border-radius: 0.65rem;
-    padding: 1rem;
-    margin-right: 1.2rem;
+    margin-right: 0.9rem;
+    grid-template-columns: auto minmax(0,1fr);
   }
 }
