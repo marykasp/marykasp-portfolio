@@ -630,9 +630,9 @@ section.active {
 }
 
 section.skills .skill {
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .skill .set {
@@ -662,14 +662,14 @@ section.skills .skill {
 }
 
 .set h3 {
-  margin-top: 1rem;
+  margin: 1rem 0;
   font-size: 1.5rem;
   color: var(--skin-color);
   text-align: center;
 }
 
 .set .list {
-  padding: 0.5rem;
+  padding: 0 0.5rem;
   display: grid;
   grid-template-columns: 1fr 10px;
   color: var(--text-light);
@@ -678,6 +678,43 @@ section.skills .skill {
 
 .set .list i {
   font-size: 2rem;
+}
+
+/* About tabs section */
+
+.about-tabs {
+  margin-top: 1.5rem;
+}
+
+.about-tabs .tab-item {
+  padding: 2px 0;
+  background-color: transparent;
+  border: none;
+  text-transform: capitalize;
+  display: inline-block;
+  color: var(--text-dark);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 30px 0 0;
+  position: relative;
+  opacity: 0.5;
+  transition: all 0.3 ease;
+}
+
+.about-tabs .tab-item:last-child {
+  margin: 0;
+}
+
+.about-tabs .tab-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 20%;
+  height: 3px;
+  background-color: var(--skin-color);
+  transition: width 0.3s ease;
 }
 
 /* ======== MEDIA QUERIES ========*/
@@ -852,11 +889,13 @@ section.skills .skill {
 
   /* Skills Section*/
   section.skills .skill {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 3rem;
   }
 
   .set .list {
     grid-template-columns: 1fr 24px;
+    padding: 0.2rem 0.5rem;
   }
 }

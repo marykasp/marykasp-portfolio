@@ -61,7 +61,8 @@ linkItem.forEach(function(link) {
   })
 })
 
-// add event listener to about button to show the about section when clicked on
+// ====================== ABOUT BUTTON EVEN LISTENER ========================
+// **** when clicked SHOW ACTIVE SECTION, CHANGE ACTIVE NAV LINK *****
 button.addEventListener("click", function(e) {
   // turn the href value #about into an array, select second element - about
   // add active class to section with id of target (#about)
