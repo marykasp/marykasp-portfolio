@@ -1,6 +1,8 @@
 const allSections = document.querySelectorAll("section");
 // list of all the nav links (a elements)
 const linkItem = document.querySelectorAll('.nav__link');
+// about me button
+const button = document.querySelector(".about-me")
 
 // ================== SHOW SECTIONS FUNCTION========================
 const showSection = function(element) {
@@ -59,4 +61,18 @@ linkItem.forEach(function(link) {
   })
 })
 
+// add event listener to about button to show the about section when clicked on
+button.addEventListener("click", function(e) {
+  // turn the href value #about into an array, select second element - about
+  // add active class to section with id of target (#about)
+  showSection(e.target)
 
+  // add active class to navlink with same href attribute
+  linkItem.forEach(function(link) {
+    if(link.getAttribute("href").includes('about')) {
+      link.classList.add("active")
+    } else {
+      link.classList.remove("active")
+    }
+  })
+})
