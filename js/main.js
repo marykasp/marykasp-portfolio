@@ -2,7 +2,8 @@ const allSections = document.querySelectorAll("section");
 // list of all the nav links (a elements)
 const linkItem = document.querySelectorAll('.nav__link');
 // about me button
-const button = document.querySelector(".about-me")
+const button = document.querySelector(".about-me");
+const tabItem = document.querySelector(".tab-item");
 
 // ================== SHOW SECTIONS FUNCTION========================
 const showSection = function(element) {
@@ -76,4 +77,9 @@ button.addEventListener("click", function(e) {
       link.classList.remove("active")
     }
   })
+})
+
+// ====================== TAB ITEM TURN ACTIVE WHEN CLICKED ========================
+tabItem.addEventListener("click", function(e) {
+  const target = e.target.getAttribute("data-target")
 })
