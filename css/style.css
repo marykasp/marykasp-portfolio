@@ -95,6 +95,10 @@ p {
   color: var(--text-dark)
 }
 
+span {
+  color: var(--text-dark);
+}
+
 .nav__link span {
   color: var(--nav-links)
 }
@@ -622,63 +626,7 @@ section.active {
   display: inline-block;
   color: var(--text-dark);
 }
-/* ========= SKILLS =========*/
 
-.skills .list {
-  display: flex;
-  align-items: center;
-}
-
-section.skills .skill {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.skill .set {
-  background-color: var(--bg-color-sidebar);
-  padding: 1.5rem 1.5rem 1rem 1.5rem;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.skill .set:hover {
-  box-shadow: var(--box-shadow);
-}
-
-.set span i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 5rem;
-  height: 5rem;
-  font-size: 3rem;
-  background-color: var(--skin-color);
-  color: var(--header-color);
-  border-radius: 0.65rem;
-  margin-inline: auto;
-}
-
-.set h3 {
-  margin: 1rem 0;
-  font-size: 1.5rem;
-  color: var(--skin-color);
-  text-align: center;
-}
-
-.set .list {
-  padding: 0 0.5rem;
-  display: grid;
-  grid-template-columns: 1fr 10px;
-  color: var(--text-light);
-  text-transform: uppercase;
-}
-
-.set .list i {
-  font-size: 2rem;
-}
 
 /* About tabs section */
 
@@ -716,12 +664,142 @@ section.skills .skill {
   background-color: var(--skin-color);
   transition: width 0.3s ease;
 }
+/* ========= SKILLS =========*/
+
+.skills .list {
+  display: flex;
+  align-items: center;
+}
+
+section.skills .skill {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skill .set {
+  background-color: var(--bg-color-sidebar);
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skill .set:hover {
+  box-shadow: var(--box-shadow);
+}
+
+.set span i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  font-size: 3rem;
+  background-color: var(--skin-color);
+  color: #fff;
+  border-radius: 0.65rem;
+  margin-inline: auto;
+}
+
+.set h3 {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  color: var(--skin-color);
+  text-align: center;
+}
+
+.set .list {
+  padding: 0 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 10px;
+  color: var(--text-light);
+  text-transform: uppercase;
+}
+
+.set .list i {
+  font-size: 2rem;
+}
+
+/* Skills bars */
+section.skills aside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.skills-bar {
+  width: 600px;
+  background-color: #fff;
+  border-radius: 0.625rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem 2rem;
+}
+
+.skills-bar .bar {
+  margin: 1.25rem 0;
+}
+
+.skills-bar .bar:first-child {
+  margin-top: 0;
+}
+.skills-bar .bar .info {
+  margin-bottom: 5px;
+}
+
+.skills-bar .bar .info span {
+  font-size: 1.063rem;
+  font-weight: 500;
+}
+
+.skills-bar .bar .progress-line {
+  position: relative;
+  height: 10px;
+  width: 100%;
+  background-color: #f0f0f0;
+  border-radius: 0.625rem;
+  box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05), 0px 1px rgba(255,255,255, 0.8);
+}
+
+.bar .progress-line span {
+  height: 100%;
+  width: 80%;
+  border-radius: 0.625rem;
+  background-color: var(--skin-color);
+  position: absolute;
+}
+
+.bar .progress-line span::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: -10px;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+}
+
+.bar .progress-line span::after {
+  position: absolute;
+  content: "50%";
+  right: 0;
+  top: -10px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  background: #000;
+  padding: 1px 8px;
+}
 
 /* ======== MEDIA QUERIES ========*/
 @media screen and (min-width: 900px) {
   body {
     margin: calc(var(--header-height) + 2rem) 0 0 0;
-    padding-left: calc(var(--nav-width) + 2rem)
+    padding-left: calc(var(--nav-width) + 3rem)
   }
 
   .header {
