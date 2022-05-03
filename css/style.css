@@ -910,8 +910,21 @@ section.skills aside {
   left: 30%;
 }
 
+.portfolio-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
 .portfolio-item-inner {
-  box-shadow: var(--outer-shadow);
+  /* padding: 15px; */
+  border-radius: 5px;
+}
+
+.portfolio-item-details {
+  display: none;
 }
 
 .portfolio-item-details .info li {
@@ -1117,5 +1130,11 @@ section.skills aside {
 
   .skills-bar {
     max-width: 600px;
+  }
+
+  .portfolio-item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 15px;
   }
 }
