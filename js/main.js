@@ -5,6 +5,20 @@ const linkItem = document.querySelectorAll('.nav__link');
 const button = document.querySelector(".about-me");
 const tabItem = document.querySelector(".tab-item");
 
+// portfolio selectors
+const filterContainer = document.querySelector('.portfolio-filter');
+const portfolioItemsContainer = document.querySelector('.portfolio-items');
+const portfolioItems = document.querySelectorAll('.portfolio-item');
+const popup = document.querySelector('.portfolio-popup');
+console.log(popup)
+const prevBtn = popup.querySelector('.pp-prev');
+const nextBtn = popup.querySelector('.pp-next');
+const closeBtn = popup.querySelector('.pp-close');
+const projectDetailsContainer = popup.querySelector('.pp-details');
+const projectDetailsBtn = popup.querySelector('.pp-project-details-btn');
+let itemIndex, slideIndex, screenshots;
+
+
 // ================== SHOW SECTIONS FUNCTION========================
 const showSection = function(element) {
   // iterate over all the sections and remove active class
@@ -82,4 +96,11 @@ button.addEventListener("click", function(e) {
 // ====================== TAB ITEM TURN ACTIVE WHEN CLICKED ========================
 tabItem.addEventListener("click", function(e) {
   const target = e.target.getAttribute("data-target")
+})
+
+// ====================== PORTFOLIO FILTER & POPUP ========================
+
+// *** filter portfolio items
+filterContainer.addEventListener("click", function(e) {
+  console.log(e.target)
 })

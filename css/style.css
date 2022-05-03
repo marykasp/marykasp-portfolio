@@ -89,6 +89,7 @@ h4 {
 
 a {
   text-decoration: none;
+  color: var(--skin-color);
 }
 
 p {
@@ -985,7 +986,6 @@ section.skills aside {
 
 /* ======== PORTFOLIO POPUP ========*/
 .portfolio-popup {
-  /* display: none; */
   background-color: var(--bg-color-main);
   position: fixed;
   left: 0;
@@ -994,12 +994,17 @@ section.skills aside {
   height: 100%;
   z-index: 1000;
   overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .portfolio-popup .pp-details {
   max-width: 1350px;
   width: calc(85% + 30px);
   margin: auto;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
 }
 
 .portfolio-popup .pp-details-inner {
@@ -1020,11 +1025,15 @@ section.skills aside {
 
 .portfolio-popup .pp-title p {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 500;
   color: var(--text-light);
   margin: 0 0 15px;
   border-bottom: 1px solid var(--border-light);
   padding-bottom: 10px;
+}
+
+.portfolio-popup .pp-title p span{
+  font-weight: 300;
 }
 
 .portfolio-popup .pp-project-details h3 {
@@ -1049,6 +1058,20 @@ section.skills aside {
   flex: 0 0 35%;
   max-width: 35%;
   padding: 0 15px;
+}
+
+.portfolio-popup .info ul li {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.portfolio-popup .info ul li span {
+  font-weight: 300;
+}
+
+.portfolio-popup .info ul li:last-child {
+  margin: 0;
 }
 
 .portfolio-popup .separator {
