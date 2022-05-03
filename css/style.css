@@ -544,8 +544,6 @@ section.active {
   flex-wrap: wrap;
   position: relative;
 }
-
-
 /* ========= ABOUT =========*/
 
 .about__img {
@@ -611,8 +609,8 @@ section.active {
 }
 
 .personal-info .info-item {
-  flex: 0 0 50%;
-  max-width: 50%;
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
 .personal-info .info-item p {
@@ -869,8 +867,52 @@ section.skills aside {
   width: 60%;
 }
 
+
+/* ======== PORTFOLIO ========*/
+
+.portfolio-filter {
+  padding: 0 15px;
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+.portfolio-filter .filter-item {
+  display: inline-block;
+  margin: 0 5px 5px;
+  padding: 3px 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--skin-color);
+  text-transform: capitalize;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.filter-item:hover:not(.active) {
+  opacity: 0.6;
+}
+
+.filter-item.active {
+  color: var(--text-light);
+}
+
+.filter-item.active::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 13px;
+  background-color: var(--skin-color);
+  top: 90%;
+  left: 30%;
+}
+
+
 /* ======== MEDIA QUERIES ========*/
 @media screen and (min-width: 576px) {
+  /* Skills container - display column center */
   .skills__container {
     justify-content: center;
   }
@@ -878,7 +920,12 @@ section.skills aside {
   .skills__content {
     padding: 2rem 4rem;
   }
+
+  .skills-bar {
+    max-width: 450px;
+  }
 }
+
 @media screen and (min-width: 900px) {
   body {
     margin: calc(var(--header-height) + 2rem) 0 0 0;
@@ -1048,9 +1095,18 @@ section.skills aside {
     font-size: 2rem;
   }
 
+  .personal-info .info-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
   /* Skills Section*/
   .skills__container {
     grid-template-columns: repeat(2, 400px);
     column-gap: 2rem;
+  }
+
+  .skills-bar {
+    max-width: 600px;
   }
 }
