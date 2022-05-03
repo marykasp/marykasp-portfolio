@@ -914,6 +914,11 @@ section.skills aside {
   box-shadow: var(--outer-shadow);
 }
 
+.portfolio-item-details .info li {
+  list-style: none;
+  color: var(--text-dark);
+}
+
 /* ======== MEDIA QUERIES ========*/
 @media screen and (min-width: 576px) {
   /* Skills container - display column center */
