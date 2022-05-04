@@ -1018,6 +1018,35 @@ section.skills aside {
   opacity: 1;
 }
 
+.portfolio-popup .pp-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1005;
+  background-color: rgba(255,255,255,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.portfolio-popup .pp-loader.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.portfolio-popup .pp-loader div {
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--skin-color);
+  border-radius: 50%;
+  border-right: 3px solid transparent;
+  animation: spin 2s linear infinite;
+}
+
 .portfolio-popup .pp-details {
   max-width: 1350px;
   width: calc(85% + 30px);

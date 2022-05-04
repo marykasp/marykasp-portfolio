@@ -113,6 +113,7 @@ function popupSlideshow() {
   // console.log(imgSrc)
   // get popupImg element
   const popupImg = popup.querySelector(".pp-img");
+  // activate loader until the popupImg loaded
   // change the src of the popupimg to be equal to the screenshot
   popupImg.src = imgSrc
 }
