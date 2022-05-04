@@ -108,9 +108,13 @@ function popupToggle() {
 }
 
 function popupSlideshow() {
+  // get first image from screenshots array based on portfolio item clicked on
   const imgSrc = screenshots[slideIndex];
   // console.log(imgSrc)
-  const popupImg = popup.querySelector(".pp-img")
+  // get popupImg element
+  const popupImg = popup.querySelector(".pp-img");
+  // change the src of the popupimg to be equal to the screenshot
+  popupImg.src = imgSrc
 }
 
 // ====================== PORTFOLIO FILTER & POPUP ========================
