@@ -102,5 +102,23 @@ tabItem.addEventListener("click", function(e) {
 
 // *** filter portfolio items
 filterContainer.addEventListener("click", function(e) {
-  console.log(e.target)
+  if(e.target.classList.contains("filter-item") && !e.target.classList.contains("active")) {
+    // deactive existing filter active item
+    filterContainer.querySelector('.active').classList.remove("active")
+    // activate new filter item that was clicked on
+    e.target.classList.add("active");
+    // get data-target value from filter item
+    const target = e.target.getAttribute("data-target");
+
+    // iterate over the portfolio items - if the data category matches the target then remove hide class and add show class
+    portfolioItems.forEach((item) => {
+      if(item.getAttribute("data-category") === target || target === "all") {
+        item.classList.remove("hide");
+        item.classList.add("show")
+      } else {
+        item.classList.add("hide");
+        item.classList.remove("show")
+      }
+    })
+  }
 })

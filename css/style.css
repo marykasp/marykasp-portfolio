@@ -924,9 +924,19 @@ section.skills aside {
   margin-top: 2rem;
 }
 
+
 .portfolio-item {
   background-color: var(--header-color);
   margin-bottom: 1rem;
+}
+
+.portfolio-item.hide {
+  display: none;
+}
+
+.portfolio-item.show {
+  display: block;
+  animation: fadeInTop 0.5s ease;
 }
 
 .portfolio-item-inner {
