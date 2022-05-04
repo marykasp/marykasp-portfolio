@@ -231,6 +231,9 @@ portfolioItemsContainer.addEventListener("click", (e) => {
 closeBtn.addEventListener("click", () => {
   // toggle off the popup
   popupToggle();
+  if(projectDetailsContainer.classList.contains("active")) {
+    popupDetailsToggle();
+  }
 })
 
 // Next slide image
