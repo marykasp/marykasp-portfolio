@@ -24,7 +24,10 @@
   0px 5.6px 10px rgba(0, 0, 0, 0.04),
   0px 13.6px 24.1px rgba(0, 0, 0, 0.052),
   0px 45px 80px rgba(0, 0, 0, 0.08);
+
+  /* Shadows and alert colors */
   --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+  --alert-color: #F75D59;
 
   /* ==== Mode Toggler Colors ==== */
   /** Sunny side **/
@@ -1184,6 +1187,11 @@ section.skills aside {
   text-align: center;
   line-height: 40px;
   cursor: pointer;
+  transition: all 0.3 ease;
+}
+
+.portfolio-popup .pp-close:hover {
+  color: var(--alert-color);
 }
 
 .portfolio-popup .pp-counter {

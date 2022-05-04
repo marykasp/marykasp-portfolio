@@ -114,8 +114,13 @@ function popupSlideshow() {
   // get popupImg element
   const popupImg = popup.querySelector(".pp-img");
   // activate loader until the popupImg loaded
+  popup.querySelector(".pp-loader").classList.add("active")
   // change the src of the popupimg to be equal to the screenshot
-  popupImg.src = imgSrc
+  popupImg.src = imgSrc;
+  popupImg.onload = () => {
+    // deactive loader after the popupImg loads
+    popup.querySelector(".pp-loader").classList.remove("active")
+  }
 }
 
 // ====================== PORTFOLIO FILTER & POPUP ========================
