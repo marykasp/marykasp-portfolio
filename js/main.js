@@ -10,7 +10,7 @@ const filterContainer = document.querySelector('.portfolio-filter');
 const portfolioItemsContainer = document.querySelector('.portfolio-items');
 const portfolioItems = document.querySelectorAll('.portfolio-item');
 const popup = document.querySelector('.portfolio-popup');
-console.log(popup)
+// console.log(popup)
 const prevBtn = popup.querySelector('.pp-prev');
 const nextBtn = popup.querySelector('.pp-next');
 const closeBtn = popup.querySelector('.pp-close');
@@ -93,14 +93,18 @@ button.addEventListener("click", function(e) {
   })
 })
 
-// ====================== TAB ITEM TURN ACTIVE WHEN CLICKED ========================
+// ====================== TAB ITEM TURN ACTIVE WHEN CLICKED =================
 tabItem.addEventListener("click", function(e) {
   const target = e.target.getAttribute("data-target")
 })
 
+function bodyScrollingToggle() {
+  document.body.classList.toggle("stop-scrolling")
+}
+
 // ====================== PORTFOLIO FILTER & POPUP ========================
 
-// *** filter portfolio items
+// *** filter portfolio items - Event Listener
 filterContainer.addEventListener("click", function(e) {
   if(e.target.classList.contains("filter-item") && !e.target.classList.contains("active")) {
     // deactive existing filter active item
@@ -122,3 +126,27 @@ filterContainer.addEventListener("click", function(e) {
     })
   }
 })
+
+portfolioItemsContainer.addEventListener("click", (e) => {
+  if(e.target.closest(".portfolio-item-inner")) {
+    // get parent element of portfolio-item-inner elements (portfolio item div itself)
+    const portfolioItem = e.target.closest(".portfolio-item-inner").parentElement;
+
+    // get portfolio item index by using indexOf on the portfolioItem list
+    itemIndex = Array.from(portfolioItem.parentElement.children).indexOf(portfolioItem);
+
+    // use index to retrieve the specific image element
+    // screenshots = portfolioItem.querySelector(".portfolio-item-img")
+    screenshots = portfolioItems[itemIndex].querySelector(".portfolio-item-img img").getAttribute("data-screenshots");
+    // convert strings of screenshots into an array of strings
+    screenshots = screenshots.split(",");
+    slideIndex = 0;
+    // call popup toggle function
+    popupToggle();
+  }
+})
+
+function popupToggle() {
+  popup.classList.toggle("open");
+  bodyScrollingToggle();
+}
