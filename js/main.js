@@ -165,6 +165,14 @@ portfolioItemsContainer.addEventListener("click", (e) => {
     // convert strings of screenshots into an array of strings
     screenshots = screenshots.split(",");
     slideIndex = 0;
+    // if screenshots only has 1 element, remove buttons
+    if(screenshots.length === 1) {
+      prevBtn.style.display="none";
+      nextBtn.style.display="none";
+    } else {
+      prevBtn.style.display="block";
+      nextBtn.style.display="block";
+    }
     // toggle popup to open
     popupToggle();
     // popup image slideshow
@@ -188,6 +196,18 @@ nextBtn.addEventListener("click", () => {
   }
   // call popupSlideShow which will change the popupImg source to match the slide index
   popupSlideshow();
+  console.log(`slideIndex: ${slideIndex}`)
+})
+
+// Previous image
+prevBtn.addEventListener("click", () => {
+  if(slideIndex === 0) {
+    slideIndex = screenshots.length-1
+  } else {
+    slideIndex--;
+  }
+  popupSlideshow();
+  console.log(`slideIndex: ${slideIndex}`)
 })
 
 
