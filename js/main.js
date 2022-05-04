@@ -125,6 +125,13 @@ function popupSlideshow() {
   popup.querySelector(".pp-counter").innerHTML = (slideIndex + 1) + " of " + screenshots.length
 }
 
+function popupDetails() {
+  // get the project details from the portfolioItem
+  const details = portfolioItems[itemIndex].querySelector(".portfolio-item-details").innerHTML;
+  // get the popup project details innerHTML and change to match the details from the current portfolioItem
+  popup.querySelector(".pp-project-details").innerHTML = details;
+}
+
 function popupDetailsToggle() {
   if(projectDetailsContainer.classList.contains("active")) {
     projectDetailsBtn.querySelector("i").classList.remove("bx-minus");
@@ -176,7 +183,8 @@ portfolioItemsContainer.addEventListener("click", (e) => {
     // get parent element of portfolio-item-inner elements (portfolio item div itself)
     const portfolioItem = e.target.closest(".portfolio-item-inner").parentElement;
 
-    // get portfolio item index by using indexOf on the portfolioItem list
+    // get portfolio item index by using indexOf on the portfolioItems list
+    //Array.from(portfolioItems.children).indexOf(item)
     itemIndex = Array.from(portfolioItem.parentElement.children).indexOf(portfolioItem);
 
     // use index to retrieve the specific image element and get the data-screenshots attribute
@@ -199,7 +207,7 @@ portfolioItemsContainer.addEventListener("click", (e) => {
     // popup image slideshow - change source of popup image
     popupSlideshow();
     // display portfolio details
-    // popupDetails();
+    popupDetails();
   }
 })
 

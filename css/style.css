@@ -107,6 +107,7 @@ p {
 
 li {
   list-style: none;
+  color: var(--text-dark);
 }
 
 span {
