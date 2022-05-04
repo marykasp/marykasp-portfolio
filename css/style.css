@@ -1284,6 +1284,11 @@ section.skills aside {
   right: 15px;
 }
 
+/* ========= CONTACT========== */
+.contact {
+  background-color: red;
+}
+
 /* ======== MEDIA QUERIES ========*/
 @media screen and (min-width: 576px) {
   /* Skills container - display column center */
@@ -1440,7 +1445,7 @@ section.skills aside {
     transform: translate(0%, -50%);
   }
 
-  /* About Section */
+/* ========= ABOUT ========= */
   .about__container {
     display: flex;
     gap: 2rem;
