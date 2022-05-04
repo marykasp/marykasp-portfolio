@@ -102,6 +102,17 @@ function bodyScrollingToggle() {
   document.body.classList.toggle("stop-scrolling")
 }
 
+function popupToggle() {
+  popup.classList.toggle("open");
+  bodyScrollingToggle();
+}
+
+function popupSlideshow() {
+  const imgSrc = screenshots[slideIndex];
+  // console.log(imgSrc)
+  const popupImg = popup.querySelector(".pp-img")
+}
+
 // ====================== PORTFOLIO FILTER & POPUP ========================
 
 // *** filter portfolio items - Event Listener
@@ -135,18 +146,23 @@ portfolioItemsContainer.addEventListener("click", (e) => {
     // get portfolio item index by using indexOf on the portfolioItem list
     itemIndex = Array.from(portfolioItem.parentElement.children).indexOf(portfolioItem);
 
-    // use index to retrieve the specific image element
+    // use index to retrieve the specific image element and get the data-screenshots attribute
     // screenshots = portfolioItem.querySelector(".portfolio-item-img")
     screenshots = portfolioItems[itemIndex].querySelector(".portfolio-item-img img").getAttribute("data-screenshots");
     // convert strings of screenshots into an array of strings
     screenshots = screenshots.split(",");
     slideIndex = 0;
-    // call popup toggle function
+    // toggle popup to open
     popupToggle();
+    // popup image slideshow
+    popupSlideshow();
   }
 })
 
-function popupToggle() {
-  popup.classList.toggle("open");
-  bodyScrollingToggle();
-}
+// Add Event listener to close button in portfolio popup
+closeBtn.addEventListener("click", () => {
+  // toggle off the popup
+  popupToggle();
+})
+
+
