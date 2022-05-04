@@ -126,10 +126,26 @@ function popupSlideshow() {
 }
 
 function popupDetails() {
+  // if the portfolio item details does not exist
+  if(!portfolioItems[itemIndex].querySelector(".portfolio-item-details")) {
+    projectDetailsBtn.style.display="none";
+    return; /* end function execution */
+  }
+
+  projectDetailsBtn.style.display="block";
   // get the project details from the portfolioItem
   const details = portfolioItems[itemIndex].querySelector(".portfolio-item-details").innerHTML;
   // get the popup project details innerHTML and change to match the details from the current portfolioItem
   popup.querySelector(".pp-project-details").innerHTML = details;
+  // get the project title
+  const title = portfolioItems[itemIndex].querySelector(".portfolio-item-title").innerText;
+  console.log(title)
+  // grab the popup title and change to the title of portfolio item clicked on
+  popup.querySelector(".pp-title h2").innerText = title;
+  // get the project category from the data-category attribute
+  const category = portfolioItems[itemIndex].getAttribute("data-category");
+  // grab the popup category element and change the text
+  popup.querySelector(".pp-project-category").innerHTML = category.split("-").join(" ");
 }
 
 function popupDetailsToggle() {
