@@ -125,6 +125,26 @@ function popupSlideshow() {
   popup.querySelector(".pp-counter").innerHTML = (slideIndex + 1) + " of " + screenshots.length
 }
 
+function popupDetailsToggle() {
+  if(projectDetailsContainer.classList.contains("active")) {
+    projectDetailsBtn.querySelector("i").classList.remove("bx-minus");
+    projectDetailsBtn.querySelector("i").classList.add("bx-plus");
+
+    // if already open remove the active class
+    projectDetailsContainer.classList.remove("active");
+    projectDetailsContainer.style.maxHeight = 0 + "px";
+  } else {
+    // when details are displayed change the icon on the projectDetailsBtn
+    projectDetailsBtn.querySelector("i").classList.remove("bx-plus");
+    projectDetailsBtn.querySelector("i").classList.add("bx-minus");
+    // add active class to the pp details of popup to display details
+    projectDetailsContainer.classList.add("active");
+    projectDetailsContainer.style.maxHeight = projectDetailsContainer.scrollHeight + "px";
+    popup.scrollTo(0,projectDetailsContainer.offsetTop);
+    // console.log(projectDetailsContainer.scrollHeight)
+  }
+}
+
 // ====================== PORTFOLIO FILTER & POPUP ========================
 
 // *** filter portfolio items - Add event listener to filterContainer, add/remove hide class depending on data-target
@@ -164,6 +184,7 @@ portfolioItemsContainer.addEventListener("click", (e) => {
     screenshots = portfolioItems[itemIndex].querySelector(".portfolio-item-img img").getAttribute("data-screenshots");
     // convert strings of screenshots into an array of strings
     screenshots = screenshots.split(",");
+    // set slideIndex to 0 - displays first image in screenshots array
     slideIndex = 0;
     // if screenshots only has 1 element, remove buttons
     if(screenshots.length === 1) {
@@ -175,8 +196,10 @@ portfolioItemsContainer.addEventListener("click", (e) => {
     }
     // toggle popup to open
     popupToggle();
-    // popup image slideshow
+    // popup image slideshow - change source of popup image
     popupSlideshow();
+    // display portfolio details
+    // popupDetails();
   }
 })
 
@@ -210,4 +233,8 @@ prevBtn.addEventListener("click", () => {
   console.log(`slideIndex: ${slideIndex}`)
 })
 
+// ** Add event listener to popup details button
+projectDetailsBtn.addEventListener("click", () => {
+  popupDetailsToggle();
+})
 

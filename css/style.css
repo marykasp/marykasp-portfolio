@@ -1057,6 +1057,11 @@ section.skills aside {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.portfolio-popup .pp-details.active {
+  opacity: 1;
 }
 
 .portfolio-popup .pp-details-inner {
@@ -1141,10 +1146,10 @@ section.skills aside {
 }
 
 .portfolio-popup .pp-main {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   max-width: 1350px;
   width: 85%;
-  margin: 0 auto;
+  margin: 2rem auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1158,7 +1163,7 @@ section.skills aside {
 .portfolio-popup .pp-project-details-btn {
   position: absolute;
   left: 0;
-  border-radius: 30px;
+  border-radius: 5px;
   font-size: 1.3rem;
   font-weight: 500;
   padding: 0 15px;
@@ -1167,11 +1172,17 @@ section.skills aside {
   top: 15px;
   height: 40px;
   line-height: 40px;
+  transition: all 0.3 ease;
+}
+
+.portfolio-popup .pp-project-details-btn:hover {
+  opacity: 0.5;
 }
 
 .portfolio-popup .pp-project-details-btn i {
   margin-left: 5px;
-  font-size: 1rem;
+  font-size: 1.3rem;
+  color: var(--alert-color);
 }
 
 .portfolio-popup .pp-close {
