@@ -121,11 +121,13 @@ function popupSlideshow() {
     // deactive loader after the popupImg loads
     popup.querySelector(".pp-loader").classList.remove("active")
   }
+  // popup counter - change the inner HTML to match the number of images for each project
+  popup.querySelector(".pp-counter").innerHTML = (slideIndex + 1) + " of " + screenshots.length
 }
 
 // ====================== PORTFOLIO FILTER & POPUP ========================
 
-// *** filter portfolio items - Event Listener
+// *** filter portfolio items - Add event listener to filterContainer, add/remove hide class depending on data-target
 filterContainer.addEventListener("click", function(e) {
   if(e.target.classList.contains("filter-item") && !e.target.classList.contains("active")) {
     // deactive existing filter active item
@@ -148,6 +150,7 @@ filterContainer.addEventListener("click", function(e) {
   }
 })
 
+// *** Add event listener to portfolio items, when clicked on trigger portfolio popup window and slideshow for that specific portfolio item
 portfolioItemsContainer.addEventListener("click", (e) => {
   if(e.target.closest(".portfolio-item-inner")) {
     // get parent element of portfolio-item-inner elements (portfolio item div itself)
@@ -169,10 +172,22 @@ portfolioItemsContainer.addEventListener("click", (e) => {
   }
 })
 
-// Add Event listener to close button in portfolio popup
+// ** Add Event listener to close button in portfolio popup
 closeBtn.addEventListener("click", () => {
   // toggle off the popup
   popupToggle();
+})
+
+// Next slide image
+nextBtn.addEventListener("click", () => {
+  // if slideIndex is equal to index of last screenshot in the array, revert back to 0 index
+  if(slideIndex === screenshots.length-1) {
+    slideIndex = 0;
+  } else {
+    slideIndex++;
+  }
+  // call popupSlideShow which will change the popupImg source to match the slide index
+  popupSlideshow();
 })
 
 
