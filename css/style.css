@@ -52,7 +52,7 @@
 
 body.dark {
   --bg-color-main: #15131E;
-  --bg-color-sidebar: #332F3D;
+  --bg-color-sidebar: #514d5a;
   --header-color: #332F3D;
   --text-dark: #fff;
   --text-light: #e9e9e9;
@@ -1103,6 +1103,7 @@ section.skills aside {
 }
 
 .portfolio-popup .pp-title h2 {
+  color: var(--skin-color);
   font-size: 28px;
   text-transform: capitalize;
   font-weight: 700;
@@ -1286,7 +1287,7 @@ section.skills aside {
 
 /* ========= CONTACT========== */
 .contact {
-  background-color: red;
+  /* background-color: red; */
 }
 
 /* ======== MEDIA QUERIES ========*/
