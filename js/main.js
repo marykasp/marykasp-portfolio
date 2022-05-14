@@ -265,3 +265,21 @@ projectDetailsBtn.addEventListener("click", () => {
   popupDetailsToggle();
 })
 
+// ====================== ABOUT TABS SWITCH ========================
+const tabsContainer = document.querySelector('.about-tabs');
+console.log(tabsContainer)
+const aboutSection = document.querySelector('#about')
+
+tabsContainer.addEventListener("click", (e) => {
+  if(e.target.classList.contains('tab-item') && !e.target.classList.contains("active")) {
+    // remmove active from other tab item
+    document.querySelector('.tab-item.active').classList.remove('active');
+    // add active class to tab clicked on
+    e.target.classList.add("active")
+    // get data attribute of tab item - will match the id of the tab-content element to display
+    const target = e.target.getAttribute('data-target');
+    aboutSection.querySelector('.tab-content.active').classList.remove('active');
+    // get the tab content that matches the target and add the active class
+    aboutSection.querySelector(target).classList.add("active");
+  }
+})

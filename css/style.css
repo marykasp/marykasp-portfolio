@@ -464,13 +464,13 @@ header {
 
 h3.hello {
   font-family: var(--header-font);
-  font-size: 28px;
+  font-size: 1.75rem; /* 28px */
   margin: 15px 0;
 }
 
 h3.hello span {
   font-family: "Clicker Script", cursive;
-  font-size: 40px;
+  font-size: 3rem;
   font-weight: 700;
   color: var(--skin-color);
 }
@@ -548,7 +548,7 @@ section {
 section.active {
   display: block;
   padding: 30px 0;
-  margin: 30px auto;
+  margin: 30px auto 0;
 }
 
 .title .section__title {
@@ -757,6 +757,10 @@ section.active {
   padding: 10px 0 0 30px;
 }
 
+.tab-content .timeline-item:last-child {
+  margin-bottom: 0;
+}
+
 .tab-content .timeline-item::before {
   content: "";
   position: absolute;
@@ -767,6 +771,25 @@ section.active {
   left: 0px;
   top: 20px;
 }
+
+.tab-content .timeline-item .date {
+  color: var(--skin-color);
+  display: block;
+  font-weight: 400;
+  margin: 0 0 10px;
+}
+
+.tab-content .timeline-item h4 {
+  font-size: 1.125rem;
+  text-transform: capitalize;
+  margin: 0 0 10px;
+}
+
+.tab-content .timeline-item h4 span {
+  font-weight: 300;
+  letter-spacing: 1.5px;
+}
+
 /* ========= SKILLS =========*/
 .skills__container {
   display: grid;
