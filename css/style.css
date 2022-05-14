@@ -727,7 +727,46 @@ section.active {
 }
 
 /* education tab-content */
+.tab-content {
+  padding: 2.5rem 0; /* 40px */
+  display: none;
+}
 
+.tab-content.active {
+  display: block;
+}
+
+.tab-content .timeline {
+  position: relative;
+}
+
+.tab-content .timeline::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  top: 0;
+  left: 5px;
+  background-color: var(--skin-color);
+}
+
+.tab-content .timeline-item {
+  color: var(--text-light);
+  margin-bottom: 1.875rem; /* 30px */
+  position: relative;
+  padding: 10px 0 0 30px;
+}
+
+.tab-content .timeline-item::before {
+  content: "";
+  position: absolute;
+  height: 11px;
+  width: 11px;
+  border-radius: 50%;
+  background-color: var(--skin-color);
+  left: 0px;
+  top: 20px;
+}
 /* ========= SKILLS =========*/
 .skills__container {
   display: grid;
