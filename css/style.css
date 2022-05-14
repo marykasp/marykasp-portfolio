@@ -589,8 +589,8 @@ section.active {
   flex-wrap: wrap;
   position: relative;
 }
-/* ========= ABOUT =========*/
 
+/* ========= ABOUT =========*/
 .about__img {
   width: 200px;
   height: 200px;
@@ -675,7 +675,7 @@ section.active {
 }
 
 
-/* About tabs section */
+/* ========= ABOUT TABS: EDUCATION / EXEPERIENCE =========*/
 
 .about-tabs {
   margin-top: 1.5rem;
@@ -693,7 +693,7 @@ section.active {
   font-weight: 500;
   margin: 0 30px 0 0;
   position: relative;
-  opacity: 0.5;
+  opacity: 0.6;
   transition: all 0.3 ease;
 }
 
@@ -706,11 +706,28 @@ section.active {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 20%;
-  height: 3px;
+  width: 40%;
+  height: 2px;
   background-color: var(--skin-color);
   transition: width 0.3s ease;
 }
+
+.about-tabs .tab-item:hover::before {
+  width: 100%;
+}
+
+.about-tabs .tab-item.active::before {
+  width: 100%;
+  background-color: var(--skin-color);
+}
+
+.about-tabs .tab-item.active {
+  opacity: 1;
+  cursor: auto;
+}
+
+/* education tab-content */
+
 /* ========= SKILLS =========*/
 .skills__container {
   display: grid;
