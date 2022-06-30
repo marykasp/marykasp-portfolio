@@ -113,7 +113,7 @@
     <!-- End Of Navbar-->
 
     <!--======== HOMEPAGE ======== -->
-    <section class="home active" id="home">
+    <section class="home" id="home">
       <div class="container">
         <div class="row">
           <div class="home-info">
@@ -830,35 +830,41 @@
     <!-- portfolio popup section end -->
 
      <!-- ======== CONTACT SECTION =========== -->
-    <section class="contact container" id="contact">
+    <section class="contact container active" id="contact">
       <div class="title">
         <span class="section__subtitle">Get in touch</span>
         <h2 class="section__title">Contact</h2>
       </div>
       <div class="row">
         <!-- start of contact item -->
-        <div class="contact-item">
-          <div class="contact-item-inner">
-            <i class='bx bxl-github' ></i>
-            <span>Github</span>
-            <p>marykasp</p>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-inner">
-              <i class='bx bxs-envelope' ></i>
-              <span>Email</span>
-              <p>kasparian.mary@gmail.com</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-inner">
-              <i class='bx bxs-edit'></i>
-              <span>Blog</span>
-              <p>marykasparian.com</p>
+          <div class="form">
+            <div class="contact-info"></div>
+            <div class="contact-form">
+              <span class="circle one"></span>
+              <span class="circle two"></span>
+
+              <form action="index.html">
+                <h3 class="title">Contact me</h3>
+                <div class="input-container">
+                  <input type="text" name="name" class="input" id="name">
+                  <label for="name">Name</label>
+                  <span>Name</span>
+                </div>
+                <div class="input-container">
+                  <input type="email" name="email" class="input" id="email">
+                  <label for="email">Email</label>
+                  <span>Email</span>
+                </div>
+                <div class="input-container textarea">
+                  <textarea name="message" id="message" class="input"></textarea>
+                  <label for="message">Message</label>
+                  <span>Message</span>
+                </div>
+                <input type="submit" value="Send" class="form-btn">
+              </form>
             </div>
           </div>
 
-        </div>
       </div>
     </section>
     <!-- ======== Style Switcher Menu =========== -->
@@ -883,5 +889,6 @@
 
   <!-- ===== MAIN JS ===== -->
   <script src="js/main.js"></script>
+  <script src="js/portfolio.js"></script>
   <script src="js/style-switcher.js"></script>
 </html>
