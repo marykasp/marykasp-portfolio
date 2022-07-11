@@ -1,6 +1,6 @@
 .style-switcher {
   position: fixed;
-  right: 0;
+  right: 10px;
   top: 50px;
   padding: 15px;
   width: 200px;
@@ -67,23 +67,23 @@
 }
 
 .style-switcher .color-1 {
-  background: #6b5b7d;
+  background: #ac92eb;
 }
 
 .style-switcher .color-2 {
-  background: #325c7f;
+  background: #4fc1e8;
 }
 
 .style-switcher .color-3 {
-  background: #c06c86;
+  background: #a0d568;
 }
 
 .style-switcher .color-4 {
-  background: #ee7282;
+  background: #ffce54;
 }
 
 .style-switcher .color-5 {
-  background: #f8b28e;
+  background: #ed5564;
 }
 
 /* Toast notification */
@@ -191,6 +191,7 @@
 /* ===== MEDIA QUERIES =====*/
 @media screen and (min-width: 768px) {
   .style-switcher {
+    right: 0;
     top: 52px;
   }
 
@@ -201,6 +202,7 @@
 
 @media screen and (min-width: 900px) {
   .style-switcher {
+    right: 0;
     top: 70px;
   }
 
