@@ -113,7 +113,7 @@
     <!-- End Of Navbar-->
 
     <!--======== HOMEPAGE ======== -->
-    <section class="home" id="home">
+    <section class="home active" id="home">
       <div class="container">
         <div class="row">
           <div class="home-info">
@@ -175,7 +175,9 @@
         <h2 class="section__title">About Me</h2>
       </div>
       <div class="about__container grid">
-        <img class="about__img" src="img/profile-pic.jpg" alt="" />
+        <div class="img-container">
+          <img class="about__img" src="img/profile-pic.jpg" alt="" />
+        </div>
         <div class="about__data">
           <h3>my name is mary & i am a <span>front-end developer</span></h3>
           <p class="about__description">
@@ -830,7 +832,7 @@
     <!-- portfolio popup section end -->
 
      <!-- ======== CONTACT SECTION =========== -->
-    <section class="contact container active" id="contact">
+    <section class="contact container" id="contact">
       <div class="title">
         <span class="section__subtitle">Get in touch</span>
         <h2 class="section__title">Contact</h2>
@@ -926,10 +928,23 @@
         <span class="color-5" onclick="setActiveStyle('color-5')"></span>
       </div>
     </div>
-  </body>
 
-  <!-- ===== MAIN JS ===== -->
+    <!-- ========== Toast Menu Popup =========== -->
+    <div class="toast">
+      <div class="toast-content">
+        <i class='bx bx-check check'></i>
+        <div class="message">
+          <span class="text text1">Success</span>
+          <span class="text">the theme has changed!</span>
+        </div>
+      </div>
+      <i class='bx bx-x close'></i>
+      <div class="progress"></div>
+    </div>
+
+    <!-- ===== MAIN JS ===== -->
   <script src="js/main.js"></script>
   <script src="js/portfolio.js"></script>
   <script src="js/style-switcher.js"></script>
+  </body>
 </html>

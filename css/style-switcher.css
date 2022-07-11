@@ -1,7 +1,7 @@
 .style-switcher {
   position: fixed;
   right: 0;
-  top: 60px;
+  top: 50px;
   padding: 15px;
   width: 200px;
   border: 1px solid var(--bg-color-sidebar);
@@ -9,8 +9,8 @@
   z-index: 101;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease;
   transform: translateX(100%);
+  transition: all 0.3s ease;
 }
 
 .style-switcher.open {
@@ -86,9 +86,125 @@
   background: #f8b28e;
 }
 
+/* Toast notification */
+.toast {
+  position: absolute;
+  top: 90px;
+  right: 20px;
+  padding: 10px 35px 10px 20px;
+  border-radius: 12px;
+  background: var(--header-color);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateX(calc(100% + 20px));
+  border-left: 6px solid var(--skin-color);
+  transition: all 0.5s cubic-bezier(0.688, -0.55, 0.265, 1.35);
+  overflow: hidden;
+}
+
+.toast.active {
+  transform: translateX(0);
+}
+
+.toast .toast-content {
+  display: flex;
+  align-items: center;
+}
+
+.toast-content .message {
+  display: flex;
+  flex-direction: column;
+}
+
+.toast-content .message .text {
+  margin: 0;
+  font-size: 17px;
+  color: var(--text-dark);
+  font-weight: 400;
+}
+
+.toast-content .message .text.text1 {
+  font-weight: 600;
+  margin-bottom: 0;
+  color: var(--text-dark);
+}
+
+.toast-content .check {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--skin-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.toast .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.toast .close:hover {
+  opacity: 1;
+}
+
+.toast .progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #ddd;
+}
+
+.toast .progress:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: var(--skin-color);
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes progress {
+  100% {
+    right: 100%;
+  }
+}
+
+.toast .progress.play:before {
+  animation: progress 5s linear forwards;
+}
+
+/* .progress.active.progress:before {
+  animation: progress 5s linear forwards;
+} */
+
 /* ===== MEDIA QUERIES =====*/
 @media screen and (min-width: 768px) {
   .style-switcher {
+    top: 52px;
+  }
+
+  .toast {
+    top: 30px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .style-switcher {
     top: 70px;
+  }
+
+  .toast {
+    top: 100px;
   }
 }
