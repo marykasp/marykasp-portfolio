@@ -1,6 +1,6 @@
 .style-switcher {
-  position: absolute;
-  right: 10px;
+  position: fixed;
+  right: -5px;
   top: 50px;
   padding: 15px;
   width: 200px;
@@ -88,8 +88,8 @@
 
 /* Toast notification */
 .toast {
-  position: absolute;
-  top: 90px;
+  position: fixed;
+  top: 170px;
   right: 20px;
   padding: 10px 35px 10px 20px;
   border-radius: 12px;
@@ -189,24 +189,24 @@
 } */
 
 /* ===== MEDIA QUERIES =====*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) {
   .style-switcher {
     right: 0;
     top: 52px;
   }
 
   .toast {
-    top: 30px;
+    top: 150px;
   }
 }
 
 @media screen and (min-width: 900px) {
   .style-switcher {
     right: 0;
-    top: 15px;
+    top: 80px;
   }
 
   .toast {
-    top: 100px;
+    top: 170px;
   }
 }
