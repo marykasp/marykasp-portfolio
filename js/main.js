@@ -3,6 +3,7 @@ const allSections = document.querySelectorAll("section");
 const linkItem = document.querySelectorAll(".nav__link");
 // about me button
 const button = document.querySelector(".about-me");
+const contactBtn = document.querySelector(".contact-me");
 const tabItem = document.querySelector(".tab-item");
 
 // ================== SHOW SECTIONS FUNCTION   ========================
@@ -64,6 +65,7 @@ linkItem.forEach(function (link) {
 
 // ====================== ABOUT BUTTON EVENT LISTENER ========================
 // **** when clicked SHOW ACTIVE SECTION, CHANGE ACTIVE NAV LINK *****
+
 button.addEventListener("click", function (e) {
   // turn the href value #about into an array, select second element - about
   // add active class to section with id of target (#about)
@@ -72,6 +74,20 @@ button.addEventListener("click", function (e) {
   // add active class to navlink with same href attribute
   linkItem.forEach(function (link) {
     if (link.getAttribute("href").includes("about")) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+});
+
+contactBtn.addEventListener("click", (e) => {
+  // show the specific section with id of contact
+  showSection(e.target);
+
+  // add active class to navlink with same href attribute
+  linkItem.forEach(function (link) {
+    if (link.getAttribute("href").includes("contact")) {
       link.classList.add("active");
     } else {
       link.classList.remove("active");
