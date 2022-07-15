@@ -132,3 +132,21 @@ inputs.forEach((input) => {
   input.addEventListener("focus", focusFunc);
   input.addEventListener("blur", blurFunc);
 });
+
+// Send Email
+// function sendEmail() {
+//   Email.send({
+//     Host: "smtp.gmail.com",
+//     Username: "kasparian.mary@gmail.com",
+//     Password: "password",
+//     To: "kasparian.mary@gmail.com",
+//     From: document.getElementById("email").value,
+//     Subject: "New Contact Form Enquiry",
+//     Body: `Name: ${document.getElementById("name").value}
+//     ${document.getElementById("email").value}
+
+//     ${document.getElementById("message").value}
+
+//     `,
+//   }).then((message) => alert(message));
+// }

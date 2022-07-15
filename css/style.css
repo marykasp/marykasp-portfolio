@@ -180,7 +180,7 @@ header {
   font-size: 1.5rem;
 }
 
-/* ========== NAVBAR ========== */
+/* ========== SIDE NAVBAR ========== */
 .navbar {
   position: fixed;
   top: 0;
@@ -199,6 +199,13 @@ header {
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
+}
+
+.nav__list {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .nav__logo,
@@ -295,6 +302,7 @@ header {
 }
 
 /* ========= DARK MODE TOGGLER =========*/
+/* Code inpsired */
 .toggle-checkbox {
   display: none;
 }
