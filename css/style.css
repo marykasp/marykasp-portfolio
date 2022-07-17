@@ -202,7 +202,7 @@ header {
 }
 
 .nav__list {
-  height: 40vh;
+  height: 55vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1407,7 +1407,6 @@ textarea {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 20px 1px var(--outer-shadow);
-  /* z-index: 1000; */
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr;
@@ -1417,6 +1416,15 @@ textarea {
 .contact-form {
   background-color: var(--skin-color);
   position: relative;
+}
+
+.contact-form .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 2rem;
+  height: 100%;
 }
 
 .circle {
@@ -1595,7 +1603,13 @@ textarea.input {
 
 .contact .information .bx {
   font-size: 28px;
-  color: var(--skin-color);
+  color: var(--nav-links);
+  margin-right: 0.7rem;
+}
+
+.contact .information p {
+  font-size: 16px;
+  color: var(--nav-links);
   margin-right: 0.7rem;
 }
 

@@ -65,7 +65,6 @@ linkItem.forEach(function (link) {
 
 // ====================== ABOUT BUTTON EVENT LISTENER ========================
 // **** when clicked SHOW ACTIVE SECTION, CHANGE ACTIVE NAV LINK *****
-
 button.addEventListener("click", function (e) {
   // turn the href value #about into an array, select second element - about
   // add active class to section with id of target (#about)
@@ -73,7 +72,7 @@ button.addEventListener("click", function (e) {
 
   // add active class to navlink with same href attribute
   linkItem.forEach(function (link) {
-    if (link.getAttribute("href").includes("about")) {
+    if (link.getAttribute("href").includes("contact")) {
       link.classList.add("active");
     } else {
       link.classList.remove("active");
@@ -84,7 +83,7 @@ button.addEventListener("click", function (e) {
 contactBtn.addEventListener("click", (e) => {
   // show the specific section with id of contact
   showSection(e.target);
-
+  console.log(e.target.getAttribute("href").split("#")[1]);
   // add active class to navlink with same href attribute
   linkItem.forEach(function (link) {
     if (link.getAttribute("href").includes("contact")) {
