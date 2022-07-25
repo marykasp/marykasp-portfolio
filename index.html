@@ -123,9 +123,9 @@
       <div class="container">
         <div class="row">
           <div class="home-info">
-            <h3 class="hello">
+            <h1 class="hello">
               Hello, my name is <span class="name">Mary Kasparian</span>
-            </h3>
+            </h1>
             <h3 class="profession">I'm a <span>web developer</span></h3>
             <p>
               I am a mission-driven front end web developer with a passion for
@@ -134,7 +134,7 @@
               science researcher in the field of genetics to a current software engineer student...
             </p>
             <div class="socials">
-              <div>
+              <div class="social-buttons">
                 <a href="#about" class="btn about-me">About Me</a>
                 <a href="#contact" class="btn contact-me">Contact Me</a>
               </div>
@@ -225,10 +225,10 @@
         <div class="personal-info">
           <div class="row">
             <div class="info-item">
-              <p>Blog: <span>marykasparian.com</span></p>
+              <p>Blog: <a href="https://marykasparian.com" target="_blank"><span>marykasparian.com</span></a></p>
             </div>
             <div class="info-item">
-              <p>Email : <span>kasparian.mary@gmail.com</span></p>
+              <p>Email : <a href="mailto:kasparian.mary@gmail.com"><span>kasparian.mary@gmail.com</span></a></p>
             </div>
             <div class="info-item">
               <p>Degree : <span>Bachelors</span></p>
@@ -240,7 +240,8 @@
               <p>Freelance : <span>Available</span></p>
             </div>
             <div class="info-item">
-              <p>Github: <span>marykasp</span></p>
+              <p>GitHub: <a  href="https://github.com/marykasp"
+                target="_blank"><span>marykasp</span></a></p>
             </div>
           </div>
         </div>
@@ -262,7 +263,7 @@
             <p>Mastery based learning approach to full stack development, currently enrolled in the Ruby Track</p>
           </div>
           <div class="timeline-item">
-            <span class="date">2020 - 2022</span>
+            <span class="date">2021 - 2022</span>
             <h4>Front End Web Development - <span>Skillcrush</span></h4>
             <p>Completed the Break Into Tech Course with a focus on Front-end Development.</p>
           </div>
@@ -392,7 +393,25 @@
                 <i class="bx bxs-badge-check"></i>
                 <div>
                   <h3 class="skills__name">Python</h3>
+                  <span class="skills__level">Learning</span>
+                </div>
+              </div>
+            </div>
+            <div class="skills__group">
+              <div class="skills__data">
+                <!-- boxicon badge -->
+                <i class="bx bxs-badge-check"></i>
+                <div>
+                  <h3 class="skills__name">Ruby</h3>
                   <span class="skills__level">Beginner</span>
+                </div>
+              </div>
+              <div class="skills__data">
+                <!-- boxicon badge -->
+                <i class="bx bxs-badge-check"></i>
+                <div>
+                  <h3 class="skills__name">PHP</h3>
+                  <span class="skills__level">Learning</span>
                 </div>
               </div>
             </div>
@@ -404,6 +423,7 @@
       </div>
       <!-- Skills bar -->
       <aside>
+        <h3 class="skills-header">Practice Spent on Each Skill</h3>
         <div class="skills-bar">
           <div class="bar">
             <div class="info">
@@ -459,15 +479,17 @@
         <div class="portfolio-item" data-category="web-application">
           <div class="portfolio-item-inner">
             <div class="portfolio-item-img">
-              <img
-                src="img/portfolio/thumb/project-1.png"
-                alt="portfolio"
-                data-screenshots="img/portfolio/large/project-1/1.png, img/portfolio/large/project-1/2.png,img/portfolio/large/project-1/3.png, img/portfolio/large/project-1/4.png, img/portfolio/large/project-1/5.png"
-              />
-
+                <img
+                  src="img/portfolio/thumb/project-1.png"
+                  alt="portfolio"
+                  data-screenshots="img/portfolio/large/project-1/1.png, img/portfolio/large/project-1/2.png,img/portfolio/large/project-1/3.png, img/portfolio/large/project-1/4.png, img/portfolio/large/project-1/5.png"
+                />
               <span class="view-project">view project</span>
             </div>
-            <p class="portfolio-item-title"><span><i class='bx bx-ghost' ></i></span> personal portfolio</p>
+            <p class="portfolio-item-title">
+              <span><i class='bx bx-ghost' ></i></span>
+              personal portfolio
+            </p>
             <!-- portfolio item details -->
             <div class="portfolio-item-details">
               <div class="row">
@@ -485,7 +507,7 @@
                     <li>
                       Web -
                       <span
-                        ><a href="https://marykasp.com" target="_blank"
+                        ><a href="https://marykasp.com" target="_blank" class="project-link"
                           >www.marykasp.com</a
                         ></span
                       >
@@ -525,7 +547,7 @@
                     <li>
                       Web -
                       <span
-                        ><a href="https://marykasparian.com" target="_blank"
+                        ><a href="https://marykasparian.com" target="_blank" class="project-link"
                           >www.marykasparian.com</a
                         ></span
                       >
@@ -565,7 +587,7 @@
                     <li>
                       Web -
                       <span
-                        ><a href="https://marykasp.github.io/guess-the-word/" target="_blank"
+                        ><a href="https://marykasp.github.io/guess-the-word/" target="_blank" class="project-link"
                           >marykasp.github.io/guess-the-word/</a
                         ></span
                       >
@@ -605,7 +627,7 @@
                     <li>
                       Web -
                       <span
-                        ><a href="https://marykasp.github.io/github-repo-gallery/" target="_blank"
+                        ><a href="https://marykasp.github.io/github-repo-gallery/" target="_blank" class="project-link"
                           >marykasp.github.io/github-repo-gallery/</a
                         ></span
                       >
@@ -645,7 +667,7 @@
                     <li>
                       Web -
                       <span
-                        ><a href="https://marykasp.github.io/city-weather-app/" target="_blank"
+                        ><a href="https://marykasp.github.io/city-weather-app/" target="_blank" class="project-link"
                           >marykasp.github.io/city-weather-app/</a
                         ></span
                       >
@@ -685,7 +707,7 @@
                     <li>
                       Web -
                       <span
-                        ><a href="https://marykasp.github.io/quiz-master-bloc/" target="_blank"
+                        ><a href="https://marykasp.github.io/quiz-master-bloc/" target="_blank" class="project-link"
                           >marykasp.github.io/quiz-master-bloc/</a
                         ></span
                       >
@@ -725,7 +747,7 @@
                     <li>
                       Web -
                       <span
-                        ><a href="https://marykasp.github.io/pokodex-app/" target="_blank"
+                        ><a href="https://marykasp.github.io/pokodex-app/" target="_blank" class="project-link"
                           >marykasp.github.io/pokodex-app/</a
                         ></span
                       >
@@ -765,7 +787,7 @@
                     <li>
                       Web -
                       <span
-                        ><a href="https://github.com/marykasp/github-battle-react" target="_blank"
+                        ><a href="https://github.com/marykasp/github-battle-react" target="_blank" class="project-link"
                           >Github Battle Github</a
                         ></span
                       >
@@ -805,7 +827,7 @@
                     <li>
                       Web -
                       <span
-                        ><a href="https://ofyson.csb.app/" target="_blank"
+                        ><a href="https://ofyson.csb.app/" target="_blank" class="project-link"
                           >Sticky notes codesandbox</a
                         ></span
                       >
@@ -866,7 +888,9 @@
           <div class="pp-main-inner">
             <div class="pp-project-details-btn">Project Details <i class='bx bx-plus'></i></div>
             <div class="pp-close">&times;</div>
-            <img src="img/portfolio/large/project-1/1.png" alt="img" class="pp-img outer-shadow">
+            <a href="#" class="pp-link" target="_blank">
+              <img src="img/portfolio/large/project-1/1.png" alt="img" class="pp-img outer-shadow">
+            </a>
             <div class="pp-counter">1 of 4</div>
           </div>
           <div class="pp-loader">
@@ -926,7 +950,7 @@
                 </div>
                 <div class="information">
                   <i class='bx bxs-envelope'></i>
-                  <p>kasparian.mary@gmail.com</p>
+                  <a href="mailto:kasparian.mary@gmail.com"><p>kasparian.mary@gmail.com</p></a>
                 </div>
                 <div class="information">
                   <i class='bx bxl-discord'></i>

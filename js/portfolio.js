@@ -18,14 +18,25 @@ function popupToggle() {
 
 function popupSlideshow() {
   // get first image from screenshots array based on portfolio item clicked on
+  console.log(itemIndex);
   const imgSrc = screenshots[slideIndex];
   // console.log(imgSrc)
   // get popupImg element
   const popupImg = popup.querySelector(".pp-img");
+  const popupLink = popup.querySelector(".pp-link");
+  console.log(popupLink);
+  const detailsLink = portfolioItems[itemIndex]
+    .querySelector(".portfolio-item-details")
+    .querySelector(".project-link").href;
+
+  // update the href attribute of the popup link to match the link in the details
+  popupLink.href = detailsLink;
+
   // activate loader until the popupImg loaded
   popup.querySelector(".pp-loader").classList.add("active");
   // change the src of the popupimg to be equal to the screenshot
   popupImg.src = imgSrc;
+
   popupImg.onload = () => {
     // deactive loader after the popupImg loads
     popup.querySelector(".pp-loader").classList.remove("active");
@@ -53,7 +64,7 @@ function popupDetails() {
   const title = portfolioItems[itemIndex].querySelector(
     ".portfolio-item-title"
   ).innerText;
-  console.log(title);
+  // console.log(title);
   // grab the popup title and change to the title of portfolio item clicked on
   popup.querySelector(".pp-title h2").innerText = title;
   // get the project category from the data-category attribute
@@ -126,6 +137,7 @@ portfolioItemsContainer.addEventListener("click", (e) => {
     itemIndex = Array.from(portfolioItem.parentElement.children).indexOf(
       portfolioItem
     );
+    console.log(itemIndex);
 
     // use index to retrieve the specific image element and get the data-screenshots attribute
     // screenshots = portfolioItem.querySelector(".portfolio-item-img")
