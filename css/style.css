@@ -1638,6 +1638,7 @@ textarea.input {
   display: flex;
   margin: 0.7rem 0;
   align-items: center;
+  color: var(--text-dark);
 }
 
 .information p {
