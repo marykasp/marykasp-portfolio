@@ -898,7 +898,7 @@ section.skills aside {
 }
 
 .skills-bar {
-  width: 600px;
+  width: 400px;
   background-color: #fff;
   border-radius: 0.625rem;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
@@ -1507,7 +1507,7 @@ form {
 
 form button.submit,
 .input {
-  width: 100%;
+  width: 90%;
   outline: none;
   border: 2px solid #fafafa;
   background: transparent;
@@ -1935,7 +1935,7 @@ textarea.input {
   }
 
   .skills-bar {
-    max-width: 600px;
+    width: 800px;
   }
 
   /* ========= PORTFOLIO ITEMS ========= */
@@ -1967,6 +1967,9 @@ textarea.input {
     bottom: -70px;
   }
 
+  .contact-form .input-container .input {
+    width: 100%;
+  }
   .social-media {
     padding: 2rem 0 0 0;
   }
