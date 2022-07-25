@@ -1723,6 +1723,14 @@ textarea.input {
   }
 }
 
+@media screen and (min-width: 900px) and (max-width: 1166px) {
+  .socials .social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
 /* larger screens - laptops/desktops */
 @media screen and (min-width: 900px) {
   body {
