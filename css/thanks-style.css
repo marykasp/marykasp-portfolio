@@ -2,9 +2,11 @@
 
 :root {
   --dog-color: #fee7af;
+  --light-blue: #9ab5f6;
 
   /* chat bubble color */
-  --color-blue: #a9bffb;
+  --main-color: #7377b4;
+  --secondary-color: #a9a3ce;
   --color-green: #c8c8a9;
   --color-brown: #774f38;
   --color-beige: #ece5ce;
@@ -18,7 +20,7 @@
 }
 
 body {
-  background: #9ab5f6;
+  background: var(--main-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,7 +51,7 @@ body {
   background-color: var(--color-beige);
   padding: 50px;
   border-radius: 12px;
-  box-shadow: 20px 20px var(--color-blue);
+  box-shadow: 20px 20px var(--secondary-color);
   z-index: 10;
   font-family: "Baloo 2";
 }
@@ -64,7 +66,7 @@ body {
   z-index: 11;
   font-weight: 700;
   background-color: var(--color-beige);
-  box-shadow: 15px 15px var(--color-blue);
+  box-shadow: 15px 15px var(--secondary-color);
   border-radius: 11px;
   width: 55px;
   height: 11px;
@@ -80,7 +82,7 @@ body {
   z-index: 12;
   bottom: -50px;
   left: 10px;
-  box-shadow: 10px 10px var(--color-blue);
+  box-shadow: 10px 10px var(--secondary-color);
 }
 
 /* Animation for speech bubble */
@@ -135,7 +137,7 @@ body {
 .bubble {
   width: 360px;
   height: 360px;
-  background: #a9bffb;
+  background: var(--secondary-color);
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -148,7 +150,7 @@ body {
 .bubbles {
   width: 40px;
   height: 40px;
-  background: #a9bffb;
+  background: var(--secondary-color);
   border-radius: 50%;
   position: absolute;
   right: 170px;
