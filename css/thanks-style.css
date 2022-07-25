@@ -17,8 +17,37 @@ body {
   width: 600px;
   height: 600px;
   border: 1px solid white;
-  /* position: absolute;
+  position: relative;
+}
+
+.bubble::before,
+.bubble::after {
+  content: "";
+  width: 120px;
+  height: 120px;
+  border-radius: inherit;
+  background: inherit;
+  position: inherit;
+}
+
+.bubble::before {
+  right: -40px;
+  top: 20px;
+}
+.bubble::after {
+  bottom: -30px;
+  left: 40px;
+  transform: scale(1.4);
+}
+
+.bubble {
+  width: 360px;
+  height: 360px;
+  background: #a9bffb;
+  border-radius: 50%;
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); */
+  transform: translate(-50%, -50%);
+  margin: auto;
 }
