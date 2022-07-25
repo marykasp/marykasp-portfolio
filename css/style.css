@@ -698,6 +698,11 @@ section.active {
   border-bottom: 1px solid var(--bg-color-sidebar);
 }
 
+.personal-info .info-item p a span {
+  color: var(--skin-color);
+  font-weight: 700;
+}
+
 .personal-info .info-item p span {
   font-weight: 400;
   margin-left: 4px;
@@ -1922,6 +1927,7 @@ textarea.input {
     flex: 0 0 50%;
     max-width: 50%;
   }
+
   /* ========= SKILLS SECTION ========= */
   .skills__container {
     grid-template-columns: repeat(2, 400px);
