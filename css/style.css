@@ -1500,6 +1500,7 @@ form {
   display: none;
 } */
 
+form button.submit,
 .input {
   width: 100%;
   outline: none;
@@ -1765,6 +1766,10 @@ textarea.input {
   .navbar {
     left: 0;
     padding: 1rem 1rem 0 0;
+  }
+
+  .nav__icon {
+    font-size: 1.45rem;
   }
 
   /* show full side navbar on destop */

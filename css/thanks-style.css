@@ -56,7 +56,6 @@ body {
 
 .container p::before {
   transform: translateY(0px);
-  animation: float2 5s ease-in-out infinite;
   content: "";
   position: absolute;
   display: block;
