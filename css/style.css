@@ -1619,13 +1619,13 @@ textarea.input {
 
 .contact .information .bx {
   font-size: 28px;
-  color: var(--nav-links);
+  color: var(--text-dark);
   margin-right: 0.7rem;
 }
 
 .contact .information p {
   font-size: 16px;
-  color: var(--nav-links);
+  color: var(--text-dark);
   margin-right: 0.7rem;
 }
 
