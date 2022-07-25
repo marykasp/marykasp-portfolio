@@ -1,3 +1,7 @@
+:root {
+  --dog-color: #fee7af;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +24,7 @@ body {
   position: relative;
 }
 
+/* ====== Main Bubble ======*/
 .bubble::before,
 .bubble::after {
   content: "";
@@ -52,6 +57,7 @@ body {
   margin: auto;
 }
 
+/* ====== Surrounding bubbles ====== */
 .bubbles {
   width: 40px;
   height: 40px;
@@ -82,4 +88,91 @@ body {
   left: -85px;
   bottom: -410px;
   transform: scale(0.8);
+}
+
+.dog {
+  width: 220px;
+  height: 90px;
+  background-color: rgb(238, 233, 233);
+  border-radius: 60px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100px;
+  margin: auto;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.head {
+  width: 170px;
+  height: 120px;
+  background-color: rgb(238, 233, 233);
+  border-radius: 70px 70px 0 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 55px;
+  overflow: hidden;
+}
+
+/* dog patch */
+.head::after,
+.dog::after {
+  content: "";
+  width: 110px;
+  height: 130px;
+  border-radius: 50%;
+  background: #a0746e;
+  position: absolute;
+}
+
+.dog::after {
+  left: 0;
+  bottom: 55px;
+}
+
+.head::after {
+  left: -25px;
+  bottom: -30px;
+}
+
+.eyes {
+  width: 16px;
+  height: 16px;
+  background: #62544d;
+  border-radius: 50%;
+  position: absolute;
+  left: 140px;
+  bottom: 175px;
+  z-index: 1;
+  box-shadow: 65px 0 #89766c;
+}
+
+.nose {
+  width: 44px;
+  height: 24px;
+  background: #89766c;
+  border-radius: 20% 20% 50% 50% / 25% 25% 70% 70%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 145px;
+  margin: auto;
+  z-index: 1;
+}
+
+/* add shine to nose */
+.nose::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 10px;
+  background: #a58f82;
+  border-radius: inherit;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 4px;
 }
