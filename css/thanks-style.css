@@ -1,11 +1,20 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"); */
+
 :root {
   --dog-color: #fee7af;
+
+  /* chat bubble color */
+  --color-blue: #a9bffb;
+  --color-green: #c8c8a9;
+  --color-brown: #774f38;
+  --color-beige: #ece5ce;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Baloo 2", cursive;
 }
 
 body {
@@ -20,9 +29,88 @@ body {
 .container {
   width: 600px;
   height: 600px;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   position: relative;
 }
+
+/* Chat bubble */
+.container p {
+  position: absolute;
+  top: 80px;
+  right: -120px;
+  transform: translateY(0px);
+  animation: float 5s ease-in-out infinite;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 3px;
+  color: var(--color-brown);
+  background-color: var(--color-beige);
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 20px 20px var(--color-blue);
+  z-index: 10;
+  font-family: "Baloo 2";
+}
+
+.container p::before {
+  transform: translateY(0px);
+  animation: float2 5s ease-in-out infinite;
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -18px;
+  left: 0;
+  z-index: 11;
+  font-weight: 700;
+  background-color: var(--color-beige);
+  box-shadow: 15px 15px var(--color-blue);
+  border-radius: 11px;
+  width: 55px;
+  height: 11px;
+}
+
+.container p::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--color-beige);
+  position: absolute;
+  z-index: 12;
+  bottom: -50px;
+  left: 10px;
+  box-shadow: 10px 10px var(--color-blue);
+}
+
+/* Animation for speech bubble */
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+/* @keyframes float2 {
+  0% {
+    transform: translatey(0px);
+  }
+  55% {
+    transform: translatey(-10px);
+  }
+  60% {
+    line-height: 10px;
+  }
+  100% {
+    transform: translatey(0px);
+  }
+} */
 
 /* ====== Main Bubble ======*/
 .bubble::before,
@@ -136,6 +224,17 @@ body {
 .head::after {
   left: -25px;
   bottom: -30px;
+}
+
+.dog::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #a0746e;
+  position: absolute;
+  right: -45px;
+  bottom: -60px;
 }
 
 .eyes {
