@@ -160,7 +160,7 @@ body {
   right: 0;
   bottom: 145px;
   margin: auto;
-  z-index: 1;
+  z-index: 3;
 }
 
 /* add shine to nose */
@@ -175,4 +175,71 @@ body {
   right: 0;
   margin: auto;
   top: 4px;
+}
+
+/* Mouth */
+.mouth {
+  width: 50px;
+  height: 25px;
+  background: rgb(238, 233, 233);
+  border: 5px solid #9a7b6a;
+  border-top: 0;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  position: absolute;
+  bottom: 125px;
+  z-index: 2;
+}
+
+.mouth::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: #9a7b6a;
+  border-radius: 50%;
+  position: inherit;
+  top: -2.5px;
+}
+
+.mouth.left {
+  left: 132.5px;
+}
+
+.mouth.left::before {
+  left: -5px;
+}
+
+.mouth.right {
+  right: 132.5px;
+}
+
+.mouth.right::before {
+  right: -5px;
+}
+
+/* tongue */
+.tongue {
+  width: 36px;
+  height: 40px;
+  background: #ffc7d0;
+  border-radius: 0 0 50px 50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 105px;
+  margin: auto;
+  z-index: 1;
+}
+
+.tongue::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 36px;
+  background: #fea4b0;
+  opacity: 0.5;
+  border-radius: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
