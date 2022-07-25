@@ -148,6 +148,16 @@ body {
   bottom: 175px;
   z-index: 1;
   box-shadow: 65px 0 #89766c;
+  animation: blink 3s infinite linear;
+}
+
+@keyframes blink {
+  4% {
+    transform: scaleY(0.1);
+  }
+  15% {
+    transform: scale(1);
+  }
 }
 
 .nose {
@@ -242,4 +252,56 @@ body {
   left: 0;
   right: 0;
   margin: auto;
+}
+
+/* Ears */
+.ear {
+  position: absolute;
+  background-color: #89766c;
+  z-index: 1;
+}
+
+.ear::before,
+.ear::after {
+  content: "";
+  position: absolute;
+  background-color: inherit;
+}
+
+.ear,
+.ear::before,
+.ear::after {
+  width: 50px;
+  height: 50px;
+  border-top-right-radius: 30%;
+}
+
+/* CSS triangle with rounded corners */
+.ear {
+  transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866);
+}
+
+.ear:before {
+  transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707)
+    translate(0, -50%);
+}
+
+.ear:after {
+  transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
+}
+
+.ear-left {
+  position: absolute;
+  left: 104px;
+  top: 56px;
+  transform: rotate(35deg);
+  z-index: 1;
+}
+
+.ear-right {
+  position: absolute;
+  right: 150px;
+  top: 80px;
+  transform: rotate(-30deg);
+  z-index: 1;
 }
