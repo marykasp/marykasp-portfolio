@@ -842,7 +842,7 @@ section.active {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   gap: 1rem;
 }
 
@@ -867,7 +867,23 @@ section.active {
   font-weight: 500;
   color: var(--skin-color);
   text-align: center;
-  /* margin-bottom: 1.5rem; */
+}
+
+.skills__icons__container {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills__icons__container .dev-icon {
+  font-size: 1.75rem;
+  color: var(--text-light);
+  margin-left: 12px;
+}
+
+.skills__icons__containner .dev-icon:last-child {
+  margin-left: 0;
 }
 
 .skills__box {
@@ -899,11 +915,6 @@ section.active {
   line-height: 18px;
   display: flex;
   gap: 5px;
-}
-
-.skills__name .dev-icon {
-  font-size: 1.3rem;
-  color: var(--skin-color);
 }
 
 .skills__level {
