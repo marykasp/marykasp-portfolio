@@ -860,6 +860,7 @@ section.active {
 
 .skills__data {
   display: flex;
+  align-items: center;
   column-gap: 0.5rem;
 }
 
@@ -872,6 +873,13 @@ section.active {
   font-size: 1.15rem;
   font-weight: 600;
   line-height: 18px;
+  display: flex;
+  gap: 5px;
+}
+
+.skills__name .dev-icon {
+  font-size: 1.3rem;
+  color: var(--skin-color);
 }
 
 .skills__level {
@@ -1839,7 +1847,7 @@ textarea.input {
     }
   }
 
-  .profile-area .outer-circle span {
+  .profile-area .outer-circle i {
     background: var(--bg-color-sidebar);
     color: var(--skin-color);
     display: block;
@@ -1854,22 +1862,22 @@ textarea.input {
   }
 
   /* place icons around circle */
-  .profile-area .outer-circle span:nth-child(1) {
+  .profile-area .outer-circle i:nth-child(1) {
     left: calc(50% - 1.5rem);
     top: -1.5rem;
   }
 
-  .profile-area .outer-circle span:nth-child(2) {
+  .profile-area .outer-circle i:nth-child(2) {
     right: -1.5rem;
     top: calc(50% - 1.5rem);
   }
 
-  .profile-area .outer-circle span:nth-child(3) {
+  .profile-area .outer-circle i:nth-child(3) {
     left: -1.5rem;
     top: calc(50% - 1.5rem);
   }
 
-  .profile-area .outer-circle span:nth-child(4) {
+  .profile-area .outer-circle i:nth-child(4) {
     bottom: -1.5rem;
     left: calc(50% - 1.5rem);
   }
